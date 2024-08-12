@@ -1,3 +1,4 @@
+import Project from '@/components/Project';
 import Image from 'next/image'
 
 export default function Home() {
@@ -22,6 +23,20 @@ export default function Home() {
             alt='Abstract 3D pastel-colored shapes flowing out from a computer screen with keyboard and stylus on the desk, representing digital creativity.'/>
         </div>
       </header>      
+      <section className='pt-8 pb-32'>
+        <h2 className='text-3xl font-bold tracking-wide'>Projects</h2>
+        <div className='w-4/5 mx-auto grid grid-rows-1 grid-cols-2 gap-x-28 mt-9'>
+          <Project title='ESBoarding' tags='UX/UI | Mobile | Onboarding | Gamification' description={`Gamified app to enhance onboarding experience for international students.`} image='/ESBoarding.png' imageAlt='A smartphone'/>
+          <Project title='GuardGo' tags='UX/UI | Smartwatch | Safety' description={`A wearable application to increase the users' sense of security.`} image='/guardGo.png' imageAlt='A smart watch'/>
+        </div>
+      </section>
+      <section className=' pb-32'>
+        <h2 className='text-3xl font-bold tracking-wide'>Playground</h2>
+        <div className='w-4/5 mx-auto grid grid-rows-1 grid-cols-2 gap-x-28 mt-9'>
+          <Project title='3D Models' tags='3D Models | Abstract | Blender' image='/3DModels.png' imageAlt='An abstrtact shape'/>
+          <Project title='Mercedes-Benz motion visualisation' tags='Loop animation | Unity 3D' image='/mercedes.png' imageAlt='A mercedes car surrounded by abstract shapes.'/>
+        </div>
+      </section>
     </main>
   );
 }

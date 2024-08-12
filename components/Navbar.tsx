@@ -5,7 +5,8 @@ import Image from 'next/image'
 export default function Navbar(){
     return (
         <header className="flex justify-between align-middle mt-7 mb-3">
-            <Image src='/logo.svg' alt='logo' width={200} height={50}/>
+            <Link href='/'><Image src='/logo.svg' alt='logo' width={200} height={50}/></Link>
+            
 
             <nav>
                 <ul className="flex">
