@@ -51,7 +51,7 @@ export default function Home() {
       </section>
       <section className='w-4/5 mx-auto grid grid-rows-1 grid-cols-3 gap-x-28 mt-9'>
         <div className='flex flex-col'>
-          <h3 className='text-3xl font-bold mb-4 text-center'>Skills</h3>
+          <h3 className='text-3xl font-bold mb-4'>Skills</h3>
           <ul className='text-2xl leading-10'>
             <li>Product design</li>
             <li>UX research</li>
@@ -64,19 +64,17 @@ export default function Home() {
           </ul>
         </div>
         <div className='flex flex-col'>
-          <h3 className='text-3xl font-bold mb-4 text-center'>Tools</h3>
+          <h3 className='text-3xl font-bold mb-4'>Tools</h3>
           <ul className='text-2xl leading-10'>
             <li>Figma</li>
-            <li>Adobe</li>
-            <li>Photoshop</li>
-            <li>Adobe </li>
-            <li>Illustrator</li>
+            <li>Adobe Photoshop</li>
+            <li>Adobe Illustrator</li>
             <li>Blender</li>
             <li>Unity 3D</li>
           </ul>
         </div>
         <div className='flex flex-col'>
-          <h3 className='text-3xl font-bold mb-4 text-center'>Aside from design</h3>
+          <h3 className='text-3xl font-bold mb-4'>Aside from design</h3>
           <ul className='text-2xl leading-10'>
             <li>Playing the guitar</li>
             <li>Singing</li>
@@ -86,11 +84,13 @@ export default function Home() {
         </div>
       </section>
       <section className="py-16 flex justify-center">
-        <button className='border-2 border-primary text-primary rounded-full py-3 px-7 text-3xl'>View my resume</button>
+        <button className='border-2 border-white text-white bg-primary rounded-full py-3 px-7 text-3xl'>
+          View my resume
+        </button>
       </section>
       <section className="px-24 py-12 w-screen bg-backbround absolute left-0">
         <h2 className='text-3xl font-bold tracking-wide mb-10'>Contact</h2>
-        <p className='mb-10'>Do you have any questions or comments? Are you interested in collaborating? Contact me!</p>
+        <p className='mb-10 text-2xl'>Do you have any questions or comments? Are you interested in collaborating?  <b className='text-primary'>Contact me!</b></p>
         <div className='w-5/12 flex justify-between mx-auto'>
           <Link href="/">
             <Image src='/in.svg' height={52} width={52} alt='linkedin logo' />
