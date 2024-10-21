@@ -43,8 +43,8 @@ export default function Home() {
         <div className="flex gap-6">
           <Image src='/about.png' className='aspect-[581/563] w-1/2' width={581} height={563} alt='Woman sitting at computer'></Image>
           <div className='text-2xl'>
-            <p className='mb-[36px] leading-10'>I&apos;m a UX/UI designer, currently working at Mercedes-Benz UI Concepts in Sindelfingen, Germany. With a master's degree in Social Informatics (specialization: Design and Product Development) and a double degree in International Management from ESB Business School (Germany) and Jagiellonian University (Poland), I bring a multidimensional perspective to my design work.</p>
-            <p className='mb-[36px] leading-10'>Over the years, I've taken part in various UX projects, managing them from user research to prototyping and usability testing. My international experience helps me understand diverse user needs and create intuitive solutions. Fluent in Polish, German, and English, I connect easily with users and stakeholders.</p>
+            <p className='mb-[36px] leading-10'>I&apos;m a UX/UI designer, currently working at Mercedes-Benz UI Concepts in Sindelfingen, Germany. With a master&apos;s degree in Social Informatics (specialization: Design and Product Development) and a double degree in International Management from ESB Business School (Germany) and Jagiellonian University (Poland), I bring a multidimensional perspective to my design work.</p>
+            <p className='mb-[36px] leading-10'>Over the years, I&apos;ve taken part in various UX projects, managing them from user research to prototyping and usability testing. My international experience helps me understand diverse user needs and create intuitive solutions. Fluent in Polish, German, and English, I connect easily with users and stakeholders.</p>
             <p>Outside of work, I enjoy nature, travels, playing guitar and savoring a good cup of coffee.</p>
           </div>
         </div>
