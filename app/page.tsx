@@ -11,7 +11,7 @@ export default function Home() {
             <h1 className='inline text-5xl tracking-wider'>Hi, i&apos;m <b>Magdalena</b></h1>
           </div>
 
-          <p className='text-lg mb-8 tracking-wide'>I am a passionate <b className='text-secondary'>UX/UI Designer</b> who loves new <b className='text-primary'>technologies</b> and art.<br /> I use my <b className='text-primary'>creativity</b> to design the best products and services for <b className='text-primary'>users</b>.</p>
+          <p className='text-xl leading-10 mb-8 tracking-wide'>I am a passionate <b className='text-secondary'>UX/UI Designer</b> who loves new <b className='text-primary'>technologies</b> and art.<br /> I use my <b className='text-primary'>creativity</b> to design the best products and services for <b className='text-primary'>users</b>.</p>
           <button className='border-2 border-primary text-primary rounded-full py-1 px-3'>Explore my work</button>
         </div>
         <div className='w-1/2 relative'>
@@ -43,7 +43,7 @@ export default function Home() {
         <div className="flex gap-6">
           <Image src='/about.png' className='aspect-[581/563] w-1/2' width={581} height={563} alt='Woman sitting at computer'></Image>
           <div className='text-2xl'>
-            <p className='mb-[36px] leading-10'>I’m a UX/UI designer, currently working at Mercedes-Benz UI Concepts in Sindelfingen, Germany. With a master's degree in Social Informatics (specialization: Design and Product Development) and a double degree in International Management from ESB Business School (Germany) and Jagiellonian University (Poland), I bring a multidimensional perspective to my design work.</p>
+            <p className='mb-[36px] leading-10'>I&apos;m a UX/UI designer, currently working at Mercedes-Benz UI Concepts in Sindelfingen, Germany. With a master's degree in Social Informatics (specialization: Design and Product Development) and a double degree in International Management from ESB Business School (Germany) and Jagiellonian University (Poland), I bring a multidimensional perspective to my design work.</p>
             <p className='mb-[36px] leading-10'>Over the years, I've taken part in various UX projects, managing them from user research to prototyping and usability testing. My international experience helps me understand diverse user needs and create intuitive solutions. Fluent in Polish, German, and English, I connect easily with users and stakeholders.</p>
             <p>Outside of work, I enjoy nature, travels, playing guitar and savoring a good cup of coffee.</p>
           </div>
