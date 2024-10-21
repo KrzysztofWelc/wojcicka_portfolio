@@ -1,5 +1,6 @@
 import Project from '@/components/Project';
 import Image from 'next/image'
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -91,9 +92,15 @@ export default function Home() {
         <h2 className='text-3xl font-bold tracking-wide mb-10'>Contact</h2>
         <p className='mb-10'>Do you have any questions or comments? Are you interested in collaborating? Contact me!</p>
         <div className='w-5/12 flex justify-between mx-auto'>
-          <Image src='/in.svg' height={52} width={52} alt='linkedin logo' />
-          <Image src='/mail.svg' height={52} width={52} alt='linkedin logo' />
-          <Image src='/whatsapp.svg' height={52} width={52} alt='linkedin logo' />
+          <Link href="/">
+            <Image src='/in.svg' height={52} width={52} alt='linkedin logo' />
+          </Link>
+          <Link href='/'>
+            <Image src='/mail.svg' height={52} width={52} alt='linkedin logo' />
+          </Link>
+          <Link href='/'>
+            <Image src='/whatsapp.svg' height={52} width={52} alt='linkedin logo' />
+          </Link>
         </div>
       </section>
     </main >
