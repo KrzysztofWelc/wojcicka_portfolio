@@ -8,9 +8,10 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      colors:{
+      colors: {
         primary: '#85BEDB',
-        secondary: '#BE816F'
+        secondary: '#BE816F',
+        backbround: '#F4F5EF'
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
