@@ -11,7 +11,7 @@ interface ProjectProps {
 export default function Project({ title, tags, description, image, imageAlt }: ProjectProps) {
     return (
         <figure>
-            <div className="inline-block overflow-hidden rounded-3xl">
+            <div className="inline-block overflow-hidden rounded-3xl w-full">
                 <Image src={image} alt={imageAlt}
                     width="0"
                     height="0"
