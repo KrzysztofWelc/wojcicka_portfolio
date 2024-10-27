@@ -3,8 +3,11 @@
 import Project from '@/components/Project';
 import Image from 'next/image'
 import Link from 'next/link';
+import { useRef } from 'react';
 
 export default function Home() {
+  const projectsSectionRef = useRef<HTMLDivElement>(null);
+
   return (
     <main>
       <header className='flex'>
@@ -14,7 +17,7 @@ export default function Home() {
           </div>
 
           <p className='text-xl leading-10 mb-8 tracking-wide'>I am a passionate <b className='text-secondary'>UX/UI Designer</b> who loves new <b className='text-primary'>technologies</b> and art.<br /> I use my <b className='text-primary'>creativity</b> to design the best products and services for <b className='text-primary'>users</b>.</p>
-          <button className='border-2 border-primary text-primary rounded-full py-1 px-3'>Explore my work</button>
+          <button onClick={() => projectsSectionRef.current?.scrollIntoView({ behavior: 'smooth' })} className='border-2 border-primary text-primary rounded-full py-2 px-3 text-2xl transition-all  ease-in-out delay-50 hover:font-bold hover:tracking-wide hover:bg-sky-50'>Explore my work</button>
         </div>
         <div className='w-1/2 relative'>
           <Image
@@ -26,7 +29,7 @@ export default function Home() {
             alt='Abstract 3D pastel-colored shapes flowing out from a computer screen with keyboard and stylus on the desk, representing digital creativity.' />
         </div>
       </header>
-      <section className='pt-8 pb-32'>
+      <section className='pt-8 pb-32' ref={projectsSectionRef}>
         <h2 className='text-3xl font-bold tracking-wide'>Projects</h2>
         <div className='w-4/5 mx-auto grid grid-rows-1 grid-cols-2 gap-x-28 mt-9'>
           <Project title='ESBoarding' tags='UX/UI | Mobile | Onboarding | Gamification' description={`Gamified app to enhance onboarding experience for international students.`} image='/ESBoarding.png' imageAlt='A smartphone' />
