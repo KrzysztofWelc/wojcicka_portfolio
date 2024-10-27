@@ -1,3 +1,5 @@
+"use client"
+
 import Project from '@/components/Project';
 import Image from 'next/image'
 import Link from 'next/link';
