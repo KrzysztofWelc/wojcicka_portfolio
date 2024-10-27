@@ -14,16 +14,22 @@ html {
 
 .navbar_gradient {
   background: rgb(255, 255, 255);
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(255, 255, 255, 1) 80%,
-    rgba(255, 255, 255, 0) 100%
-  );
+  background: linear-gradient(180deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(255, 255, 255, 1) 80%,
+      rgba(255, 255, 255, 0) 100%);
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+
+  .currentNavItem {
+    @apply font-semibold after:content-[""] after:block after:w-full after:h-1 after:rounded after:bg-secondary
+  }
+
+  .activeNavItem {
+    @apply active:rounded active:bg-secondary_transparent
   }
 }

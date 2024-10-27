@@ -12,6 +12,7 @@ const config: Config = {
         primary: '#85BEDB',
         secondary: '#BE816F',
         backbround: '#F4F5EF',
+        secondary_transparent: '#fcede9'
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
