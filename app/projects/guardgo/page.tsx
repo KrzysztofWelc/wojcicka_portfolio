@@ -1,5 +1,5 @@
+import Message from '@/components/Message';
 import Image from 'next/image';
-import Link from 'next/link';
 
 export default function GuardGo() {
     return (
@@ -51,10 +51,69 @@ export default function GuardGo() {
             </section>
             <section>
                 <h2 className="text-4xl">UX Reasearch</h2>
-                <div className='flex justify-center my-10'>
-                    <div className='bg-primary text-white text-2xl rounded-full p-5'>text me when you get home</div>
-                </div>
+                <section className='mx-10'>
+                    <div className='flex justify-center my-24'>
+                        <Message text='text me when you get home' />
+                    </div>
+                    <div>
+                        <h3 className='h3'>Initial Observations</h3>
+                        <p>During my studies and interactions with fellow students, I noticed a concern regarding personal safety, especially during late hours. Many students shared stories of feeling vulnerable while walking home or navigating poorly lit areas. These conversations highlighted a significant gap in available solutions for real-time, accessible safety measures.</p>
+                    </div>
 
+                    <div className='highlightedCard'>
+                        <h3 className='h3'>Research goals</h3>
+                        <ul className='list-disc pl-9'>
+                            <li>Understand the safety concerns and behaviors of Krakow's young adults population.</li>
+                            <li>Identify factors that influence their sense of security.</li>
+                            <li>Explore the usability and effectiveness of wearable technology in enhancing personal safety.</li>
+                        </ul>
+                    </div>
+
+                    <div className='mb-20'>
+                        <h3 className='h3'>Methodologies</h3>
+                        <ul className='list-disc pl-9'>
+                            <li><mark className='text-primary bg-transparent tracking-widest font-semibold'>Literature Review</mark> on psychological and biological reactions to stress and fear</li>
+                            <li><mark className='text-primary bg-transparent tracking-widest font-semibold'>Qualitative interviews</mark> with students to gather insights into their safety concerns and behaviors.</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3 className="h3">Research key findings</h3>
+                        <div className="py-10 mx-10 flex-col">
+                            <div className="flex items-center gap-7 mb-10">
+                                <Image src='/man.svg' width={70} height={70} alt='a man figure' />
+                                <p>There are two responses to stress in the body: either by elevating or lowering physiological indicators such as heart rate or blood pressure.</p>
+                            </div>
+                            <div className="flex items-center gap-7 mb-10">
+                                <Image src='/clock.svg' width={70} height={70} alt='a clock' />
+                                <p>Real-time updates give a sense of easier help in case of need.</p>
+                            </div>
+
+                            <div className="flex items-center gap-7 mb-10">
+                                <Image src='/pin.svg' width={70} height={70} alt='a pocation pin' />
+                                <p>Updates about location are important for young people and help them feel secure.</p>
+                            </div>
+                            <div className="flex items-center gap-7 ">
+                                <Image src='/hand.svg' width={70} height={70} alt='a hand' />
+                                <p>A disadvantage of using a phone is that hands are not free and might be needed for self-defense.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="p-16 flex justify-center items-center">
+                        <Image src='/arrow.svg' width={70} height={70} alt='a dow arrow' />
+                    </div>
+
+                    <div className='mb-20'>
+                        <h3 className='h3'>Mission Statement</h3>
+                        <p>To enhance personal safety through innovative technology, ensure that users can move around the city with confidence and peace of mind.</p>
+                    </div>
+
+                    <div className='mb-20'>
+                        <h3 className='h3'>Attributes</h3>
+                        <p>Reliable, Intuitive, Discreet, Simple, Glanceable</p>
+                    </div>
+                </section>
             </section>
         </main>
     )

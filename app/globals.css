@@ -32,4 +32,12 @@ html {
   .activeNavItem {
     @apply active:rounded active:bg-secondary_transparent
   }
+
+  .highlightedCard {
+    @apply bg-[#F5CABE] rounded-xl p-8 my-20 mx-10
+  }
+
+  .h3 {
+    @apply text-3xl font-semibold mb-4
+  }
 }
