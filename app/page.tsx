@@ -18,7 +18,7 @@ export default function Home() {
             </h1>
           </div>
 
-          <p className='mb-8 text-xl leading-10 tracking-wide'>
+          <p className='mb-8 text-2xl leading-10 tracking-wide'>
             I am a passionate <b className='text-secondary'>UX/UI Designer</b>{' '}
             who loves new <b className='text-primary'>technologies</b> and art.
             <br /> I use my <b className='text-primary'>creativity</b> to design
