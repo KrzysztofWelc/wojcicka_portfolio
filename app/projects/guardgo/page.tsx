@@ -112,6 +112,7 @@ export default function GuardGo() {
                     <div className='mb-20'>
                         <h3 className='h3'>Attributes</h3>
                         <p>Reliable, Intuitive, Discreet, Simple, Glanceable</p>
+                        <p>test</p>
                     </div>
                 </section>
             </section>
