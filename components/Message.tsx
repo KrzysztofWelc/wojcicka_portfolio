@@ -1,10 +1,11 @@
 interface MessageProps {
-    text: string
+  text: string;
 }
 
 export default function Message({ text }: MessageProps) {
-    return (
-        <div className='bg-primary text-white text-2xl rounded-full p-5 '>{text}</div>
-
-    )
+  return (
+    <div className='rounded-full bg-primary p-5 text-2xl text-white'>
+      {text}
+    </div>
+  );
 }
