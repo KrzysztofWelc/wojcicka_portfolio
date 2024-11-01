@@ -11,39 +11,41 @@ export default function Home() {
 
   return (
     <main>
-      <header className='flex'>
-        <div className='flex h-[500px] w-1/2 flex-col items-start justify-center'>
-          <div className='mb-8 flex align-middle'>
-            <h1 className='inline text-5xl tracking-wider'>
-              Hi, i&apos;m <b>Magdalena</b>
-            </h1>
-          </div>
+      <header className='flex justify-center items-center'>
+        <div className='flex w-full'>
+          <div className='flex h-screen w-1/2 flex-col items-start justify-center'>
+            <div className='mb-8 flex align-middle'>
+              <h1 className='inline text-5xl tracking-wider'>
+                Hi, i&apos;m <b>Magdalena</b>
+              </h1>
+            </div>
 
-          <p className='mb-8 text-2xl leading-10 tracking-wide'>
-            I am a passionate <b className='text-secondary'>UX/UI Designer</b>{' '}
-            who loves new <b className='text-primary'>technologies</b> and art.
-            <br /> I use my <b className='text-primary'>creativity</b> to design
-            the best products and services for{' '}
-            <b className='text-primary'>users</b>.
-          </p>
-          <button
-            onClick={() =>
-              projectsSectionRef.current?.scrollIntoView({ behavior: 'smooth' })
-            }
-            className='delay-50 rounded-full border-2 border-primary px-3 py-2 text-2xl text-primary transition-all ease-in-out hover:bg-sky-50 hover:font-bold hover:tracking-wide'
-          >
-            Explore my work
-          </button>
-        </div>
-        <div className='relative w-1/2'>
-          <Image
-            src='/computer.png'
-            width='0'
-            height='0'
-            sizes='100%'
-            className='absolute right-0 h-full w-auto'
-            alt='Abstract 3D pastel-colored shapes flowing out from a computer screen with keyboard and stylus on the desk, representing digital creativity.'
-          />
+            <p className='mb-8 text-2xl leading-10 tracking-wide'>
+              I am a passionate <b className='text-secondary'>UX/UI Designer</b>{' '}
+              who loves new <b className='text-primary'>technologies</b> and art.
+              <br /> I use my <b className='text-primary'>creativity</b> to design
+              the best products and services for{' '}
+              <b className='text-primary'>users</b>.
+            </p>
+            <button
+              onClick={() =>
+                projectsSectionRef.current?.scrollIntoView({ behavior: 'smooth' })
+              }
+              className='delay-50 rounded-full border-2 border-primary px-3 py-2 text-2xl text-primary transition-all ease-in-out hover:bg-sky-50 hover:font-bold hover:tracking-wide'
+            >
+              Explore my work
+            </button>
+          </div>
+          <div className='w-1/2 flex flex-col'>
+            <Image
+              src='/computer.png'
+              width='0'
+              height='0'
+              sizes='100%'
+              className='right-0 w-full my-auto'
+              alt='Abstract 3D pastel-colored shapes flowing out from a computer screen with keyboard and stylus on the desk, representing digital creativity.'
+            />
+          </div>
         </div>
       </header>
       <section className='pb-32 pt-8' ref={projectsSectionRef}>
