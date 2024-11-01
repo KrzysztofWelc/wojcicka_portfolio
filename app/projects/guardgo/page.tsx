@@ -1,6 +1,7 @@
 import Footer from '@/components/Footer';
 import Gallery from '@/components/Gallery';
 import Message from '@/components/Message';
+import MoodBoard from '@/components/MoodBoard';
 import Table from '@/components/Table';
 import Image from 'next/image';
 
@@ -272,7 +273,7 @@ export default function GuardGo() {
             </div>
             <div className='mb-10'>
               <h3 className='h3'>Brand identity</h3>
-              <p>moodborad</p>
+              <MoodBoard />
             </div>
 
             <div className='mb-10'>
