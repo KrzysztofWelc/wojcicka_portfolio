@@ -61,7 +61,6 @@ export default () => {
           alt='a smart watch with guard go welcome screen'
         />
       </SwiperSlide>
-
     </Swiper>
   );
 };
