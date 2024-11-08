@@ -31,7 +31,7 @@ export default function Project({
           />
         </div>
         <figcaption>
-          <h3 className='mt-7 text-4xl transition-all group-hover:font-bold group-hover:tracking-wide'>
+          <h3 className='mt-7 text-3xl transition-all group-hover:font-bold group-hover:tracking-wide'>
             {title}
           </h3>
           <div className='mt-5 text-2xl tracking-wider text-secondary'>

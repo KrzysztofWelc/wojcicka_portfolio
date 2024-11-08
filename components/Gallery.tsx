@@ -31,7 +31,7 @@ export default () => {
       </SwiperSlide>
       <SwiperSlide>
         <Image
-          src='/finalDesign/1.png'
+          src='/finalDesign/2.png'
           width={1050}
           height={787}
           alt='a smart watch with guard go welcome screen'
@@ -39,7 +39,7 @@ export default () => {
       </SwiperSlide>
       <SwiperSlide>
         <Image
-          src='/finalDesign/1.png'
+          src='/finalDesign/3.png'
           width={1050}
           height={787}
           alt='a smart watch with guard go welcome screen'
@@ -47,13 +47,21 @@ export default () => {
       </SwiperSlide>
       <SwiperSlide>
         <Image
-          src='/finalDesign/1.png'
+          src='/finalDesign/4.png'
           width={1050}
           height={787}
           alt='a smart watch with guard go welcome screen'
         />
       </SwiperSlide>
-      ...
+      <SwiperSlide>
+        <Image
+          src='/finalDesign/5.png'
+          width={1050}
+          height={787}
+          alt='a smart watch with guard go welcome screen'
+        />
+      </SwiperSlide>
+
     </Swiper>
   );
 };
