@@ -218,7 +218,7 @@ export default function GuardGo() {
                 <p>
                   The decision to develop an app for smartwatches stems from the
                   unique advantages and capabilities of smartwatches, which
-                  align perfectly with the app’s mission to enhance personal
+                  align perfectly with the app&apos;s mission to enhance personal
                   safety and provide quick, reliable emergency assistance by
                   tracking body metrics and enabling hands-free usage.
                 </p>
@@ -229,9 +229,9 @@ export default function GuardGo() {
               <h3 className='h3'>Idea - GuardGo</h3>
               <p>
                 GuardGo identifies unsafe situations by using pedometer, motion
-                and heart rate sensors and calls for help to the user’s current
+                and heart rate sensors and calls for help to the user&apos;s current
                 location. The help is called automatically, but it t is also
-                possible to send information about the danger to the user’s
+                possible to send information about the danger to the user&apos;s
                 relatives manually.
               </p>
             </div>
