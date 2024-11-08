@@ -85,7 +85,7 @@ export default function GuardGo() {
               <h3 className='h3'>Research goals</h3>
               <ul className='list-disc pl-9'>
                 <li>
-                  Understand the safety concerns and behaviors of Krakow's young
+                  Understand the safety concerns and behaviors of Krakow&apos;s young
                   adults population.
                 </li>
                 <li>
@@ -218,9 +218,10 @@ export default function GuardGo() {
                 <p>
                   The decision to develop an app for smartwatches stems from the
                   unique advantages and capabilities of smartwatches, which
-                  align perfectly with the app&apos;s mission to enhance personal
-                  safety and provide quick, reliable emergency assistance by
-                  tracking body metrics and enabling hands-free usage.
+                  align perfectly with the app&apos;s mission to enhance
+                  personal safety and provide quick, reliable emergency
+                  assistance by tracking body metrics and enabling hands-free
+                  usage.
                 </p>
               </div>
             </div>
@@ -229,10 +230,10 @@ export default function GuardGo() {
               <h3 className='h3'>Idea - GuardGo</h3>
               <p>
                 GuardGo identifies unsafe situations by using pedometer, motion
-                and heart rate sensors and calls for help to the user&apos;s current
-                location. The help is called automatically, but it t is also
-                possible to send information about the danger to the user&apos;s
-                relatives manually.
+                and heart rate sensors and calls for help to the user&apos;s
+                current location. The help is called automatically, but it t is
+                also possible to send information about the danger to the
+                user&apos;s relatives manually.
               </p>
             </div>
 
