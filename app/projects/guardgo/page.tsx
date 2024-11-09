@@ -85,8 +85,8 @@ export default function GuardGo() {
               <h3 className='h3'>Research goals</h3>
               <ul className='list-disc pl-9'>
                 <li>
-                  Understand the safety concerns and behaviors of Krakow&apos;s young
-                  adults population.
+                  Understand the safety concerns and behaviors of Krakow&apos;s
+                  young adults population.
                 </li>
                 <li>
                   Identify factors that influence their sense of security.
