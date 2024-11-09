@@ -17,7 +17,7 @@ export default function Navbar() {
     useState<boolean>(false);
   const [isMobileNavVisible, setIsMobileNavVisible] = useState<boolean>(false);
   const [isHamburgerBtnVisible, setIsHamburgerBtnVisible] =
-    useState<boolean>(false);
+    useState<boolean>(() => window.innerWidth > lgWidth);
 
   const page = usePathname();
 
