@@ -1,1 +1,1 @@
-declare module 'macy';
+declare module 'macy' { };
