@@ -17,7 +17,7 @@ export default function Gallery() {
   const galleryId = 'xxsdas'
 
   useEffect(() => {
-    let lightbox = new PhotoSwipeLightbox({
+    const lightbox = new PhotoSwipeLightbox({
       gallery: '#' + galleryId,
       children: 'a',
       pswpModule: () => import('photoswipe'),

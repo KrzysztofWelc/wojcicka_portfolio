@@ -1,13 +1,20 @@
+'use client'
+
 import Footer from '@/components/Footer';
 import Gallery from '@/components/Gallery';
 import Message from '@/components/Message';
 import MoodBoard from '@/components/MoodBoard';
 import Table from '@/components/Table';
+import useLightbox, { LightboxItem } from '@/hooks/useLightbox';
 import Image from 'next/image';
 
 export default function GuardGo() {
+  const containerId = 'containerId'
+  const lightBoxItemClass = 'lightboxItem'
+  useLightbox({ slideSelector: `#${containerId} .${lightBoxItemClass}` })
+
   return (
-    <div>
+    <div id={containerId}>
       <main>
         <header className='flex py-10 flex-col md:flex-row pt-24 md:pt-0'>
           <div className='flex h-screen flex-1 flex-col items-start justify-center'>
@@ -239,24 +246,35 @@ export default function GuardGo() {
 
             <div className='mb-10'>
               <h3 className='h3'>User Flow</h3>
-              <Image
-                className='w-full'
+              <LightboxItem
                 width={1050}
                 height={1520}
-                src='/user_flow.png'
-                alt='a diagram describing user flow'
-              />
+                className={lightBoxItemClass}
+                url='/user_flow.png'>
+                <Image
+                  className='w-full'
+                  width={1050}
+                  height={1520}
+                  src='/user_flow.png'
+                  alt='a diagram describing user flow'
+                />
+              </LightboxItem>
             </div>
 
             <div className='mb-10'>
               <h3 className='h3'>Early wireframes</h3>
-              <Image
-                className='w-full'
-                width={1050}
-                height={1520}
-                src='/early_wireframes.png'
-                alt='a diagram describing user flow'
-              />
+              <LightboxItem
+                width={1063}
+                height={555}
+                className={lightBoxItemClass}
+                url='/early_wireframes.png'>
+                <Image
+                  className='w-full'
+                  width={1050}
+                  height={1520}
+                  src='/early_wireframes.png'
+                  alt='a diagram describing user flow'
+                /></LightboxItem>
             </div>
           </div>
         </section>
