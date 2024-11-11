@@ -16,8 +16,9 @@ export default function Navbar() {
   const [isProjectsMenuVisible, setIsProjectsMenuVisible] =
     useState<boolean>(false);
   const [isMobileNavVisible, setIsMobileNavVisible] = useState<boolean>(false);
-  const [isHamburgerBtnVisible, setIsHamburgerBtnVisible] =
-    useState<boolean>(() => window.innerWidth > lgWidth);
+  const [isHamburgerBtnVisible, setIsHamburgerBtnVisible] = useState<boolean>(
+    () => window.innerWidth > lgWidth
+  );
 
   const page = usePathname();
 
@@ -32,7 +33,7 @@ export default function Navbar() {
 
   return (
     <header>
-      <div className='navbar_gradient fixed left-0 z-10 w-screen box-border'>
+      <div className='navbar_gradient fixed left-0 z-10 box-border w-screen'>
         <div
           className={`mx-10 mb-3 mt-7 flex max-w-screen-xl justify-between align-middle xl:mx-auto ${isProjectsMenuVisible && 'h-[250px]'} `}
         >

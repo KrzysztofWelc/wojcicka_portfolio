@@ -14,7 +14,7 @@ import 'swiper/css/scrollbar';
 import { useEffect } from 'react';
 
 export default function Gallery() {
-  const galleryId = 'xxsdas'
+  const galleryId = 'xxsdas';
 
   useEffect(() => {
     const lightbox = new PhotoSwipeLightbox({
@@ -43,9 +43,10 @@ export default function Gallery() {
     >
       <SwiperSlide>
         <a
-          href="/finalDesign/1.png"
-          data-pswp-width="1050"
-          data-pswp-height="787">
+          href='/finalDesign/1.png'
+          data-pswp-width='1050'
+          data-pswp-height='787'
+        >
           <Image
             src='/finalDesign/1.png'
             width={1050}
@@ -55,10 +56,11 @@ export default function Gallery() {
         </a>
       </SwiperSlide>
       <SwiperSlide>
-        <a href="/finalDesign/2.png"
-          data-pswp-width="1050"
-          data-pswp-height="787">
-
+        <a
+          href='/finalDesign/2.png'
+          data-pswp-width='1050'
+          data-pswp-height='787'
+        >
           <Image
             src='/finalDesign/2.png'
             width={1050}
@@ -68,10 +70,11 @@ export default function Gallery() {
         </a>
       </SwiperSlide>
       <SwiperSlide>
-        <a href="/finalDesign/3.png"
-          data-pswp-width="1050"
-          data-pswp-height="787">
-
+        <a
+          href='/finalDesign/3.png'
+          data-pswp-width='1050'
+          data-pswp-height='787'
+        >
           <Image
             src='/finalDesign/3.png'
             width={1050}
@@ -81,10 +84,11 @@ export default function Gallery() {
         </a>
       </SwiperSlide>
       <SwiperSlide>
-        <a href="/finalDesign/4.png"
-          data-pswp-width="1050"
-          data-pswp-height="787">
-
+        <a
+          href='/finalDesign/4.png'
+          data-pswp-width='1050'
+          data-pswp-height='787'
+        >
           <Image
             src='/finalDesign/4.png'
             width={1050}
@@ -94,10 +98,11 @@ export default function Gallery() {
         </a>
       </SwiperSlide>
       <SwiperSlide>
-        <a href="/finalDesign/5.png"
-          data-pswp-width="1050"
-          data-pswp-height="787">
-
+        <a
+          href='/finalDesign/5.png'
+          data-pswp-width='1050'
+          data-pswp-height='787'
+        >
           <Image
             src='/finalDesign/5.png'
             width={1050}

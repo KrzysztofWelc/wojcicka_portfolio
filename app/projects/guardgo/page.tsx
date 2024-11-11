@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import Footer from '@/components/Footer';
 import Gallery from '@/components/Gallery';
@@ -9,17 +9,17 @@ import useLightbox, { LightboxItem } from '@/hooks/useLightbox';
 import Image from 'next/image';
 
 export default function GuardGo() {
-  const containerId = 'containerId'
-  const lightBoxItemClass = 'lightboxItem'
-  useLightbox({ slideSelector: `#${containerId} .${lightBoxItemClass}` })
+  const containerId = 'containerId';
+  const lightBoxItemClass = 'lightboxItem';
+  useLightbox({ slideSelector: `#${containerId} .${lightBoxItemClass}` });
 
   return (
     <div id={containerId}>
       <main>
-        <header className='flex py-10 flex-col md:flex-row pt-24 md:pt-0'>
+        <header className='flex flex-col py-10 pt-24 md:flex-row md:pt-0'>
           <div className='flex h-screen flex-1 flex-col items-start justify-center'>
             <div className='mb-8 flex align-middle'>
-              <h1 className='inline text-5xl tracking-wider font-semibold'>
+              <h1 className='inline text-5xl font-semibold tracking-wider'>
                 GuardGo
               </h1>
             </div>
@@ -32,18 +32,18 @@ export default function GuardGo() {
               Explore casy study
             </button>
           </div>
-          <div className='flex flex-col flex-1'>
+          <div className='flex flex-1 flex-col'>
             <Image
               src='/guardGo2.png'
               width='0'
               height='0'
               sizes='100%'
-              className='w-full my-auto'
+              className='my-auto w-full'
               alt='Abstract 3D pastel-colored shapes flowing out from a computer screen with keyboard and stylus on the desk, representing digital creativity.'
             />
           </div>
         </header>
-        <section className='grid lg:grid-cols-3 grid-cols-1 gap-4 py-5 mb-10'>
+        <section className='mb-10 grid grid-cols-1 gap-4 py-5 lg:grid-cols-3'>
           <div className='lg:col-span-2'>
             <h2 className='mb-4 text-4xl font-semibold'>Overview</h2>
             <p className='mb-4'>
@@ -53,13 +53,13 @@ export default function GuardGo() {
               smartwatches and aims to provide a quick and efficient way to call
               for help in emergency situations.
             </p>
-            <p >
+            <p>
               {' '}
               GuardgGo was developed as part of my bachelor project and I was
               responsible for every stage of it.
             </p>
           </div>
-          <div className='flex flex-row lg:flex-col gap-8'>
+          <div className='flex flex-row gap-8 lg:flex-col'>
             <div className='mb-10'>
               <h3 className='mb-4 font-semibold'>Role</h3>
               <p>UX Researcher, UX/UI Designer</p>
@@ -126,8 +126,8 @@ export default function GuardGo() {
 
             <div>
               <h2 className='text-4xl'>UX Reasearch</h2>
-              <div className='md:mx-10 mx-2 flex-col py-10'>
-                <div className='mb-10 flex flex-col md:flex-row items-center gap-7'>
+              <div className='mx-2 flex-col py-10 md:mx-10'>
+                <div className='mb-10 flex flex-col items-center gap-7 md:flex-row'>
                   <Image
                     src='/man.svg'
                     width={70}
@@ -140,7 +140,7 @@ export default function GuardGo() {
                     rate or blood pressure.
                   </p>
                 </div>
-                <div className='mb-10 flex flex-col md:flex-row items-center gap-7'>
+                <div className='mb-10 flex flex-col items-center gap-7 md:flex-row'>
                   <Image
                     src='/clock.svg'
                     width={70}
@@ -153,7 +153,7 @@ export default function GuardGo() {
                   </p>
                 </div>
 
-                <div className='mb-10 flex flex-col md:flex-row items-center gap-7'>
+                <div className='mb-10 flex flex-col items-center gap-7 md:flex-row'>
                   <Image
                     src='/pin.svg'
                     width={70}
@@ -165,7 +165,7 @@ export default function GuardGo() {
                     help them feel secure.
                   </p>
                 </div>
-                <div className='flex flex-col md:flex-row items-center gap-7'>
+                <div className='flex flex-col items-center gap-7 md:flex-row'>
                   <Image src='/hand.svg' width={70} height={70} alt='a hand' />
                   <p>
                     A disadvantage of using a phone is that hands are not free
@@ -213,7 +213,7 @@ export default function GuardGo() {
 
             {/* <Table /> */}
 
-            <div className='mb-10 flex flex-col items-center md:flex-row gap-10'>
+            <div className='mb-10 flex flex-col items-center gap-10 md:flex-row'>
               <Image
                 width={140}
                 height={258}
@@ -250,7 +250,8 @@ export default function GuardGo() {
                 width={1050}
                 height={1520}
                 className={lightBoxItemClass}
-                url='/user_flow.png'>
+                url='/user_flow.png'
+              >
                 <Image
                   className='w-full'
                   width={1050}
@@ -267,14 +268,16 @@ export default function GuardGo() {
                 width={1063}
                 height={555}
                 className={lightBoxItemClass}
-                url='/early_wireframes.png'>
+                url='/early_wireframes.png'
+              >
                 <Image
                   className='w-full'
                   width={1050}
                   height={1520}
                   src='/early_wireframes.png'
                   alt='a diagram describing user flow'
-                /></LightboxItem>
+                />
+              </LightboxItem>
             </div>
           </div>
         </section>
@@ -322,7 +325,7 @@ export default function GuardGo() {
         </section>
         <section>
           <div className='px-10'>
-            <h2 className='md:mb-8 mb-4 text-4xl'>Key Takeaways</h2>
+            <h2 className='mb-4 text-4xl md:mb-8'>Key Takeaways</h2>
             <div className='highlightedCard'>
               <div className='mb-10'>
                 <h3 className='h3'>Challenge</h3>
