@@ -9,50 +9,50 @@ export default function GuardGo() {
   return (
     <div>
       <main>
-        <header className='flex py-10'>
-          <div className='flex h-[500px] w-1/2 flex-col items-start justify-center'>
+        <header className='flex py-10 flex-col md:flex-row pt-24 md:pt-0'>
+          <div className='flex h-screen flex-1 flex-col items-start justify-center'>
             <div className='mb-8 flex align-middle'>
-              <h1 className='inline text-5xl tracking-wider'>
-                Hi, i&apos;m <b>Magdalena</b>
+              <h1 className='inline text-5xl tracking-wider font-semibold'>
+                GuardGo
               </h1>
             </div>
 
-            <p className='mb-8 text-2xl leading-10 tracking-wide'>
+            <p className='mb-8'>
               A wearable application to increase the users&apos; sense of
               security.
             </p>
-            <button className='delay-50 rounded-full border-2 border-primary px-3 py-2 text-2xl text-primary transition-all ease-in-out hover:bg-sky-50 hover:font-bold hover:tracking-wide'>
+            <button className='delay-50 rounded-full border-2 border-primary px-3 py-2 text-primary transition-all ease-in-out hover:bg-sky-50 hover:font-bold hover:tracking-wide'>
               Explore casy study
             </button>
           </div>
-          <div className='relative w-1/2'>
+          <div className='flex flex-col flex-1'>
             <Image
               src='/guardGo2.png'
               width='0'
               height='0'
               sizes='100%'
-              className='absolute right-0 h-full w-auto'
+              className='w-full my-auto'
               alt='Abstract 3D pastel-colored shapes flowing out from a computer screen with keyboard and stylus on the desk, representing digital creativity.'
             />
           </div>
         </header>
-        <section className='grid grid-cols-3 gap-4 py-5'>
-          <div className='col-span-2'>
+        <section className='grid lg:grid-cols-3 grid-cols-1 gap-4 py-5 mb-10'>
+          <div className='lg:col-span-2'>
             <h2 className='mb-4 text-4xl font-semibold'>Overview</h2>
-            <p className='mb-4 text-2xl leading-10'>
+            <p className='mb-4'>
               Security is one of the basic human needs, it is often classified
               also as an existential need. Providing it is essential for the
               human organism to develop properly. Guardgo is an app designed for
               smartwatches and aims to provide a quick and efficient way to call
               for help in emergency situations.
             </p>
-            <p className='text-2xl leading-10'>
+            <p >
               {' '}
               GuardgGo was developed as part of my bachelor project and I was
               responsible for every stage of it.
             </p>
           </div>
-          <div className='*:text-2xl'>
+          <div className='flex flex-row lg:flex-col gap-8'>
             <div className='mb-10'>
               <h3 className='mb-4 font-semibold'>Role</h3>
               <p>UX Researcher, UX/UI Designer</p>
@@ -119,8 +119,8 @@ export default function GuardGo() {
 
             <div>
               <h2 className='text-4xl'>UX Reasearch</h2>
-              <div className='mx-10 flex-col py-10'>
-                <div className='mb-10 flex items-center gap-7'>
+              <div className='md:mx-10 mx-2 flex-col py-10'>
+                <div className='mb-10 flex flex-col md:flex-row items-center gap-7'>
                   <Image
                     src='/man.svg'
                     width={70}
@@ -133,7 +133,7 @@ export default function GuardGo() {
                     rate or blood pressure.
                   </p>
                 </div>
-                <div className='mb-10 flex items-center gap-7'>
+                <div className='mb-10 flex flex-col md:flex-row items-center gap-7'>
                   <Image
                     src='/clock.svg'
                     width={70}
@@ -146,7 +146,7 @@ export default function GuardGo() {
                   </p>
                 </div>
 
-                <div className='mb-10 flex items-center gap-7'>
+                <div className='mb-10 flex flex-col md:flex-row items-center gap-7'>
                   <Image
                     src='/pin.svg'
                     width={70}
@@ -158,7 +158,7 @@ export default function GuardGo() {
                     help them feel secure.
                   </p>
                 </div>
-                <div className='flex items-center gap-7'>
+                <div className='flex flex-col md:flex-row items-center gap-7'>
                   <Image src='/hand.svg' width={70} height={70} alt='a hand' />
                   <p>
                     A disadvantage of using a phone is that hands are not free
@@ -204,9 +204,9 @@ export default function GuardGo() {
               </p>
             </div>
 
-            <Table />
+            {/* <Table /> */}
 
-            <div className='mb-10 flex gap-10'>
+            <div className='mb-10 flex flex-col items-center md:flex-row gap-10'>
               <Image
                 width={140}
                 height={258}
@@ -303,8 +303,8 @@ export default function GuardGo() {
           </div>
         </section>
         <section>
-          <div>
-            <h2 className='mb-8 text-4xl'>Key Takeaways</h2>
+          <div className='px-10'>
+            <h2 className='md:mb-8 mb-4 text-4xl'>Key Takeaways</h2>
             <div className='highlightedCard'>
               <div className='mb-10'>
                 <h3 className='h3'>Challenge</h3>
@@ -348,7 +348,7 @@ export default function GuardGo() {
           </div>
         </section>
         <section className='mb-20 flex items-center justify-center'>
-          <button className='delay-50 rounded-full border-2 border-primary px-3 py-2 text-2xl text-primary transition-all ease-in-out hover:bg-sky-50 hover:font-bold hover:tracking-wide'>
+          <button className='delay-50 rounded-full border-2 border-primary px-3 py-2 text-primary transition-all ease-in-out hover:bg-sky-50 hover:font-bold hover:tracking-wide'>
             Explore other projects
           </button>
         </section>

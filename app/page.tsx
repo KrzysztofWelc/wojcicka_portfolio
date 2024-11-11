@@ -12,7 +12,7 @@ export default function Home() {
     <main>
       <header className='flex items-center justify-center pt-24 md:pt-0'>
         <div className='flex min-h-screen w-full flex-col justify-center md:flex-row'>
-          <div className='flex w-full flex-col items-start justify-center md:w-1/2'>
+          <div className='flex w-full flex-col flex-1 items-start justify-center '>
             <div className='mb-8 flex align-middle'>
               <h1 className='inline text-5xl tracking-wider'>
                 Hi, i&apos;m <b>Magdalena</b>

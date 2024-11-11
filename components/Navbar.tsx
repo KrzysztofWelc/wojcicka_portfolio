@@ -32,7 +32,7 @@ export default function Navbar() {
 
   return (
     <header>
-      <div className='navbar_gradient fixed left-0 z-10 w-screen'>
+      <div className='navbar_gradient fixed left-0 z-10 w-screen box-border'>
         <div
           className={`mx-10 mb-3 mt-7 flex max-w-screen-xl justify-between align-middle xl:mx-auto ${isProjectsMenuVisible && 'h-[250px]'} `}
         >
