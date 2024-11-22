@@ -14,6 +14,9 @@ const config: Config = {
         backbround: '#F4F5EF',
         secondary_transparent: '#fcede9',
       },
+      screens: {
+        'xl': '1390px'
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
