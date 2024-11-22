@@ -58,7 +58,7 @@ export default function Navbar() {
                       <Link href={'/projects/guardgo'}>GuardGo</Link>
                     </li>
                     <li className='pt-3 text-secondary'>
-                      <Link href={'/'}>ESBoarding</Link>
+                      <Link href={'/projects/esboarding'}>ESBoarding</Link>
                     </li>
                     <li className='pt-3 text-secondary'>
                       <Link href={'/'}>Ninateka</Link>
