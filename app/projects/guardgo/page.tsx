@@ -300,7 +300,38 @@ export default function GuardGo() {
 
             <div className='mb-10'>
               <h3 className='h3'>Final design</h3>
-              <Gallery />
+              <Gallery >
+                <Image
+                  src='/finalDesign/1.png'
+                  width={1050}
+                  height={787}
+                  alt='a smart watch with guard go welcome screen'
+                />
+                <Image
+                  src='/finalDesign/2.png'
+                  width={1050}
+                  height={787}
+                  alt='a smart watch with guard go welcome screen'
+                />
+                <Image
+                  src='/finalDesign/3.png'
+                  width={1050}
+                  height={787}
+                  alt='a smart watch with guard go welcome screen'
+                />
+                <Image
+                  src='/finalDesign/4.png'
+                  width={1050}
+                  height={787}
+                  alt='a smart watch with guard go welcome screen'
+                />
+                <Image
+                  src='/finalDesign/5.png'
+                  width={1050}
+                  height={787}
+                  alt='a smart watch with guard go welcome screen'
+                />
+              </Gallery>
             </div>
           </div>
         </section>

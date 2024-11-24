@@ -11,9 +11,10 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
-import { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 
-export default function Gallery() {
+
+export default function Gallery({ children }: any) {
   const galleryId = 'xxsdas';
 
   useEffect(() => {
@@ -30,6 +31,8 @@ export default function Gallery() {
     };
   }, []);
 
+  const [controller, setController] = useState(null)
+
   return (
     <Swiper
       id={galleryId}
@@ -39,78 +42,29 @@ export default function Gallery() {
       slidesPerView={1}
       navigation
       pagination={{ clickable: true }}
+      centeredSlides={true}
+      centeredSlidesBounds={true}
       className='*:select-none'
+      controller={{ control: controller }}
+
     >
-      <SwiperSlide>
-        <a
-          href='/finalDesign/1.png'
-          data-pswp-width='1050'
-          data-pswp-height='787'
-        >
-          <Image
-            src='/finalDesign/1.png'
-            width={1050}
-            height={787}
-            alt='a smart watch with guard go welcome screen'
-          />
-        </a>
-      </SwiperSlide>
-      <SwiperSlide>
-        <a
-          href='/finalDesign/2.png'
-          data-pswp-width='1050'
-          data-pswp-height='787'
-        >
-          <Image
-            src='/finalDesign/2.png'
-            width={1050}
-            height={787}
-            alt='a smart watch with guard go welcome screen'
-          />
-        </a>
-      </SwiperSlide>
-      <SwiperSlide>
-        <a
-          href='/finalDesign/3.png'
-          data-pswp-width='1050'
-          data-pswp-height='787'
-        >
-          <Image
-            src='/finalDesign/3.png'
-            width={1050}
-            height={787}
-            alt='a smart watch with guard go welcome screen'
-          />
-        </a>
-      </SwiperSlide>
-      <SwiperSlide>
-        <a
-          href='/finalDesign/4.png'
-          data-pswp-width='1050'
-          data-pswp-height='787'
-        >
-          <Image
-            src='/finalDesign/4.png'
-            width={1050}
-            height={787}
-            alt='a smart watch with guard go welcome screen'
-          />
-        </a>
-      </SwiperSlide>
-      <SwiperSlide>
-        <a
-          href='/finalDesign/5.png'
-          data-pswp-width='1050'
-          data-pswp-height='787'
-        >
-          <Image
-            src='/finalDesign/5.png'
-            width={1050}
-            height={787}
-            alt='a smart watch with guard go welcome screen'
-          />
-        </a>
-      </SwiperSlide>
-    </Swiper>
+      {
+        React.Children.map(children, i => {
+          return (
+            <SwiperSlide key={i.props.src}>
+              <a
+                href={i.props.src}
+                data-pswp-width={i.props.width}
+                data-pswp-height={i.props.height}
+                className='text-center'
+              >
+                {i}
+              </a>
+            </SwiperSlide>
+          )
+        })
+      }
+
+    </Swiper >
   );
 }
