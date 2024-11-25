@@ -1,9 +1,17 @@
+"use client"
+
+import Footer from "@/components/Footer"
 import Gallery from "@/components/Gallery"
+import useLightbox, { LightboxItem } from "@/hooks/useLightbox";
 import Image from "next/image"
 
 export default function ESBoarding() {
+    const containerId = 'containerId';
+    const lightBoxItemClass = 'lightboxItem';
+    useLightbox({ slideSelector: `#${containerId} .${lightBoxItemClass}` });
+
     return (
-        <div>
+        <div id={containerId}>
             <main>
                 <header className='flex flex-col py-10 pt-24 md:flex-row md:pt-0'>
                     <div className='flex h-screen flex-1 flex-col items-start justify-center'>
@@ -103,7 +111,7 @@ export default function ESBoarding() {
                                     alt='a man figure'
                                 />
                                 <p>
-                                    Students often feel overwhelmed by the amount of information provided at the start.
+                                    Students often feel overwhelmed by the <span className="highlightedText">amount of information</span> provided at the start.
                                 </p>
                             </div>
                             <div className='mb-10 flex flex-col items-center gap-7 md:flex-row'>
@@ -114,7 +122,7 @@ export default function ESBoarding() {
                                     alt='a clock'
                                 />
                                 <p>
-                                    A mobile-first approach is essential since students rely heavily on their smartphones for accessing information and managing their daily tasks.
+                                    A mobile-first approach is essential since students rely heavily on their <span className="highlightedText">smartphones</span> for accessing information and managing their daily tasks.
                                 </p>
                             </div>
 
@@ -126,19 +134,20 @@ export default function ESBoarding() {
                                     alt='a pocation pin'
                                 />
                                 <p>
-                                    There is a need for easy peer connections and social integration to help students feel more connected and supported in their new environment.
+                                    There is a need for easy peer connections and <span className="highlightedText">social integration</span> to help students feel more connected and supported in their new environment.
                                 </p>
                             </div>
                             <div className='mb-10 flex flex-col items-center gap-7 md:flex-row'>
                                 <Image src='/esb/keyFindings/puzzle.svg' width={70} height={70} alt='a hand' />
                                 <p>
-                                    Learning through play, as seen in serious games, can make the onboarding process more engaging and effective by combining education with entertainment.
+                                    Learning through play, as seen in <span className="highlightedText">serious games</span>, can make the onboarding process more engaging and effective by combining education with entertainment.
                                 </p>
                             </div>
                             <div className='flex flex-col items-center gap-7 md:flex-row'>
                                 <Image src='/esb/keyFindings/lang.svg' width={70} height={70} alt='a hand' />
                                 <p>
-                                    Vocabulary challenges are particularly problematic for international students, especially during the initial phase of their studies and life in Germany.                                </p>
+                                    <span className="highlightedText">Vocabulary challenges</span> are particularly problematic for international students, especially during the initial phase of their studies and life in Germany.
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -206,14 +215,21 @@ export default function ESBoarding() {
                         </ol>
                         <p>Since users can start using the application at different times, it is possible to work on tasks from multiple phases at the same time.</p>
                     </div>
-
-                    <Image
-                        src='/esb/chart.png'
+                    <LightboxItem
                         width={1051}
                         height={784}
-                        alt="ESBoarding flow chart"
-                        className="mb-10"
-                    />
+                        className={lightBoxItemClass}
+                        url='/esb/chart.png'
+                    >
+                        <Image
+                            src='/esb/chart.png'
+                            width={1051}
+                            height={784}
+                            alt="ESBoarding flow chart"
+                            className={`mb-10`}
+
+                        /></LightboxItem>
+
 
                     <div className="mb-10">
                         <h3 className="h3">Early wireframes</h3>
@@ -259,15 +275,23 @@ export default function ESBoarding() {
 
                 </section>
                 <h2 className="text-4xl mb-20">UI Design</h2>
-                <section className="mb-10">
+                <section className="mx-10">
                     <div className="mb-10">
                         <h3 className="h3">UI Library Conponents</h3>
-                        <Image
-                            src='/esb/UIComponents.png'
+                        <LightboxItem
                             width={1050}
                             height={568}
-                            alt=""
-                        />
+                            className={lightBoxItemClass}
+                            url='/esb/UIComponents.png'
+                        >
+                            <Image
+                                src='/esb/UIComponents.png'
+                                width={1050}
+                                height={568}
+                                alt=""
+                            />
+                        </LightboxItem>
+
                     </div>
                     <div className="mb-10">
                         <h3 className="h3">Final Designs</h3>
@@ -300,21 +324,53 @@ export default function ESBoarding() {
                     </div>
                 </section>
                 <h2 className="text-4xl mb-20">Usability Testing</h2>
-                <section className="mb-10 *:mb-6">
-                    <p>One of the final steps in the ESBoarding project was usability testing through a heuristic analysis specifically tailored for serious games. This evaluation, based on a set of heuristics developed by Fitchat and Jordan, played a critical role in verifying that the app met usability standards and fulfilled user needs, ensuring a positive onboarding experience for international IMX students.</p>
-                    <p>Key findings from the analysis included:</p>
-                    <ul className="list-disc pl-9">
-                        <li>ESBoarding’s mobile design allows students to conveniently access information anytime, supporting seamless navigation.</li>
-                        <li>Visual highlights and reminders maintain user engagement and motivation.</li>
-                        <li>Language terms are subtly integrated, helping students learn naturally without extra effort.</li>
-                        <li>Rewards like badges encourage progress, providing positive feedback.</li>
-                        <li>Clear indicators and progress bars enable students to track their achievements.</li>
-                        <li>The app provides in-task guidance and customizable avatars, fostering a personalized experience.</li>
-                    </ul>
-                    <p>Additionally, a formative evaluation was conducted with three current IMX students from the 6th and 8th semesters at ESB Business School in Reutlingen, who tested the prototype and provided feedback. The response was very positive, with students appreciating that "all information is in one place, and the structure is very clear."</p>
-                    <p>They valued the inclusion of basic vocabulary, saying it helped them prepare for studying in a foreign language. Suggestions for further development included adding more interactive language games and options for direct communication with peers.</p>
-                    <p>Overall, students were enthusiastic about the app's potential, viewing it as a valuable tool for easing the transition to Reutlingen and ESB Business School. One student summarized.</p>
+                <section className="mx-10">
+                    <div className="*:mb-6 mb-16">
+                        <p>One of the final steps in the ESBoarding project was usability testing through a <span className="highlightedText">heuristic analysis</span>  specifically tailored for serious games. This evaluation, based on a set of heuristics developed by Fitchat and Jordan, played a critical role in verifying that the app met usability standards and fulfilled user needs, ensuring a positive onboarding experience for international IMX students.</p>
+                        <p>Key findings from the analysis included:</p>
+                        <ul className="list-disc pl-9">
+                            <li>ESBoarding’s mobile design allows students to <span className="highlightedText">conveniently</span> access information anytime, supporting seamless navigation.</li>
+                            <li>Visual highlights and reminders maintain user <span className="highlightedText">engagement and motivation</span>.</li>
+                            <li>Language terms are subtly integrated, helping students <span className="highlightedText">learn naturally</span> without extra effort.</li>
+                            <li><span className="highlightedText">Rewards</span> like badges encourage progress, providing positive feedback.</li>
+                            <li>Clear indicators and progress bars enable students to <span className="highlightedText">track their achievements.</span></li>
+                            <li>The app provides <span className="highlightedText">in-task guidance</span> and customizable avatars, fostering a <span className="highlightedText">personalized experience</span>.</li>
+                        </ul>
+                        <p>Additionally, a <span className="highlightedText">formative evaluation</span> was conducted with three current IMX students from the 6th and 8th semesters at ESB Business School in Reutlingen, who tested the prototype and provided feedback. The response was very positive, with students appreciating that &rdquo;all information is in one place, and the structure is very clear.&rdquo;</p>
+                        <p>They valued the inclusion of basic vocabulary, saying it helped them prepare for studying in a foreign language. Suggestions for further development included adding more interactive language games and options for direct communication with peers.</p>
+                        <p>Overall, students were enthusiastic about the app&rsquo;s potential, viewing it as a valuable tool for easing the transition to Reutlingen and ESB Business School. One student summarized.</p>
+                    </div>
+                    <div className="mb-10 flex justify-end gap-8">
+                        <span className="text-5xl text-primary">&#x275D;</span>
+                        <q className="italic text-3xl">I would definitely use it. It would be helpful before and even during my studies.</q>
+                    </div>
                 </section>
-            </main></div>
+                <h2 className="text-4xl mb-20">Key Takeaways</h2>
+                <section className="mx-10">
+                    <div className='highlightedCard'>
+                        <div className='mb-10'>
+                            <h3 className='h3'>Challenge</h3>
+                            <ul className='list-disc pl-9'>
+                                <li>
+                                    Making sure the app included all necessary information without overwhelming users was a major challenge. The design had to balance being clear and simple while still keeping users engaged.
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 className='h3'>Lesson Learned</h3>
+                            <ul className='list-disc pl-9'>
+                                <li>
+                                    Regular user testing and updates were essential. Feedback directly led to design improvements, showing how important it is to focus on user needs in UX/UI design.
+                                </li>
+                                <li>
+                                    Creating a game that was both fun and informative required careful planning. As my first project incorporating game elements, it involved extensive research and a steep learning curve, and I gained valuable insights into how to balance education with engaging design.
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div></section>
+            </main>
+            <Footer />
+        </div>
     )
 }
