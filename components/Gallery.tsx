@@ -13,7 +13,6 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import React, { useEffect, useState } from 'react';
 
-
 export default function Gallery({ children }: any) {
   const galleryId = 'xxsdas';
 
@@ -31,7 +30,7 @@ export default function Gallery({ children }: any) {
     };
   }, []);
 
-  const [controller, setController] = useState(null)
+  const [controller, setController] = useState(null);
 
   return (
     <Swiper
@@ -46,25 +45,21 @@ export default function Gallery({ children }: any) {
       centeredSlidesBounds={true}
       className='*:select-none'
       controller={{ control: controller }}
-
     >
-      {
-        React.Children.map(children, i => {
-          return (
-            <SwiperSlide key={i.props.src}>
-              <a
-                href={i.props.src}
-                data-pswp-width={i.props.width}
-                data-pswp-height={i.props.height}
-                className='text-center'
-              >
-                {i}
-              </a>
-            </SwiperSlide>
-          )
-        })
-      }
-
-    </Swiper >
+      {React.Children.map(children, (i) => {
+        return (
+          <SwiperSlide key={i.props.src}>
+            <a
+              href={i.props.src}
+              data-pswp-width={i.props.width}
+              data-pswp-height={i.props.height}
+              className='text-center'
+            >
+              {i}
+            </a>
+          </SwiperSlide>
+        );
+      })}
+    </Swiper>
   );
 }

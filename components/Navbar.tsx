@@ -19,8 +19,6 @@ export default function Navbar() {
 
   const page = usePathname();
 
-
-
   return (
     <header>
       <div className='navbar_gradient fixed left-0 z-10 box-border w-screen'>
@@ -61,7 +59,7 @@ export default function Navbar() {
                       <Link href={'/projects/esboarding'}>ESBoarding</Link>
                     </li>
                     <li className='pt-3 text-secondary'>
-                      <Link href={'/'}>Ninateka</Link>
+                      <Link href={'/projects/ninateka'}>Ninateka</Link>
                     </li>
                     <li className='pt-3 text-secondary'>
                       <Link href={'/'}>Szczecin Filharmony</Link>
@@ -93,10 +91,12 @@ export default function Navbar() {
             </ul>
           </nav>
 
-          <button className='min-[900px]:hidden' onClick={() => setIsMobileNavVisible(!isMobileNavVisible)}>
+          <button
+            className='min-[900px]:hidden'
+            onClick={() => setIsMobileNavVisible(!isMobileNavVisible)}
+          >
             menu
           </button>
-
         </div>
       </div>
       {isMobileNavVisible && (

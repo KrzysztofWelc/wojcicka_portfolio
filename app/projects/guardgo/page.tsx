@@ -300,7 +300,7 @@ export default function GuardGo() {
 
             <div className='mb-10'>
               <h3 className='h3'>Final design</h3>
-              <Gallery >
+              <Gallery>
                 <Image
                   src='/finalDesign/1.png'
                   width={1050}
