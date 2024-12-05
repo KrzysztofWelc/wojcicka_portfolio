@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "debounce": "^2.2.0",
+    "motion": "^11.13.1",
     "next": "14.2.5",
     "photoswipe": "^5.4.4",
     "react": "^18",

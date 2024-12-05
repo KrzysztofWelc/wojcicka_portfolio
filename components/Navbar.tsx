@@ -99,9 +99,7 @@ export default function Navbar() {
           </button>
         </div>
       </div>
-      {isMobileNavVisible && (
-        <MobileNav closeHandler={() => setIsMobileNavVisible(false)} />
-      )}
+      <MobileNav isVisible={isMobileNavVisible} closeHandler={() => setIsMobileNavVisible(false)} />
     </header>
   );
 }
