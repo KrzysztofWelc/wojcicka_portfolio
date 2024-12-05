@@ -50,7 +50,7 @@ export default function Home() {
           </div>
         </div>
       </header>
-      <section className='pb-16 pt-8' ref={projectsSectionRef}>
+      <section id='projects' className='pb-16 pt-8' ref={projectsSectionRef}>
         <h2 className='text-3xl font-bold tracking-wide'>Projects</h2>
         <div className='mx-auto mt-9 grid grid-cols-1 grid-rows-2 gap-x-28 gap-y-12 md:grid-cols-2 md:grid-rows-1'>
           <Project
@@ -69,7 +69,7 @@ export default function Home() {
           />
         </div>
       </section>
-      <section className='pb-16'>
+      <section id='playground' className='pb-16'>
         <h2 className='text-3xl font-bold tracking-wide'>Playground</h2>
         <div className='mx-auto mt-9 grid grid-cols-1 grid-rows-2 gap-x-28 md:grid-cols-2 md:grid-rows-1'>
           <Project
@@ -86,7 +86,7 @@ export default function Home() {
           />
         </div>
       </section>
-      <section className='pb-16'>
+      <section id='about' className='pb-16'>
         <h2 className='mb-16 text-3xl font-bold tracking-wide'>About me</h2>
         <div className='flex min-h-screen w-full flex-col justify-center md:flex-row'>
           <div className='flex flex-1'>

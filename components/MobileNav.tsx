@@ -8,10 +8,18 @@ interface MobileNavProps {
   isVisible: boolean
 }
 
-export default function MobileNav({ closeHandler, isVisible }: MobileNavProps) {
+export default function MobileNav({ closeHandler: closeSideMenuHandler, isVisible }: MobileNavProps) {
   const page = usePathname();
   const [isProjectsMenuVisible, setIsProjectsMenuVisible] =
     useState<boolean>(false);
+  const [isPlaygroundMenuVisible, setIsPlaygroundMenuVisible] =
+    useState<boolean>(false);
+
+  const closeHandler = () => {
+    setIsPlaygroundMenuVisible(false)
+    setIsProjectsMenuVisible(false)
+    closeSideMenuHandler()
+  }
 
   return (
     <>
@@ -26,17 +34,19 @@ export default function MobileNav({ closeHandler, isVisible }: MobileNavProps) {
           <nav>
             <ul className='flex flex-col gap-4'>
               <li
-                className={`ml-6 whitespace-nowrap ${page === '/' && 'currentNavItem'}`}
+                className='ml-6 whitespace-nowrap'
               >
-                <Link className='activeNavItem p-2' href='/'>
+                <Link className={`activeNavItem p-2 ${page === '/' && 'currentNavItem'}`} href='/' onClick={() => {
+                  closeHandler()
+                }} >
                   Home
                 </Link>
               </li>
               <li
-                className={`ml-6 whitespace-nowrap ${page.includes('/projects') && 'currentNavItem'}`}
+                className='ml-6 whitespace-nowrap'
               >
                 <button
-                  className='activeNavItem p-2'
+                  className={`activeNavItem px-2 py-0 ${page.includes('/projects') && 'currentNavItem'}`}
                   onClick={() => setIsProjectsMenuVisible(!isProjectsMenuVisible)}
                 >
                   Projects
@@ -44,49 +54,90 @@ export default function MobileNav({ closeHandler, isVisible }: MobileNavProps) {
                 {isProjectsMenuVisible && (
                   <ul className='left-0 flex flex-col pl-8'>
                     <li className='pt-3 text-secondary'>
-                      <Link href={'/'}>GuardGo</Link>
+                      <Link onClick={() => {
+                        closeHandler()
+                      }} href={'/projects/guardgo'}>GuardGo</Link>
                     </li>
                     <li className='pt-3 text-secondary'>
-                      <Link href={'/'}>ESBoarding</Link>
+                      <Link onClick={() => {
+                        closeHandler()
+                      }} href={'/projects/esboarding'}>ESBoarding</Link>
                     </li>
                     <li className='pt-3 text-secondary'>
-                      <Link href={'/'}>Ninateka</Link>
+                      <Link onClick={() => {
+                        closeHandler()
+                      }} href={'/projects/ninateka'}>Ninateka</Link>
                     </li>
                     <li className='pt-3 text-secondary'>
-                      <Link href={'/'}>Szczecin Filharmony</Link>
+                      <Link onClick={() => {
+                        closeHandler()
+                      }} href={'/'}>Szczecin Filharmony</Link>
                     </li>
                   </ul>
                 )}
               </li>
               <li
-                className={`ml-6 whitespace-nowrap ${page.includes('/playground') && 'currentNavItem'}`}
+                className='ml-6 whitespace-nowrap '
               >
-                <Link className='activeNavItem p-2' href='playground'>
+                <button className={`activeNavItem px-2 py-0 ${page.includes('/playground') && 'currentNavItem'}`}
+                  onClick={() => { setIsPlaygroundMenuVisible(!isPlaygroundMenuVisible) }}
+                >
                   Playground
-                </Link>
+                </button>
+                {isPlaygroundMenuVisible && (
+                  <ul className='left-0 flex flex-col pl-8'>
+                    <li className='pt-3 text-secondary'>
+                      <Link onClick={() => {
+                        closeHandler()
+                      }} href={'/playground/models'}>3D models</Link>
+                    </li>
+                    <li className='pt-3 text-secondary'>
+                      <Link onClick={() => {
+                        closeHandler()
+                      }} href={'/'}>Motion Visualization</Link>
+                    </li>
+                  </ul>
+                )}
               </li>
               <li
-                className={`ml-6 whitespace-nowrap ${page.includes('/about') && 'currentNavItem'}`}
+                className='ml-6 whitespace-nowrap '
               >
-                <Link className='activeNavItem p-2' href='about'>
+                <Link className={`activeNavItem p-2 ${page.includes('/about') && 'currentNavItem'}`} href='/#about' onClick={(e) => {
+                  if (page === '/') {
+                    e.preventDefault()
+                    const contactSection = document.querySelector('#about')
+                    contactSection?.scrollIntoView({ behavior: 'smooth' })
+                  }
+                  closeHandler()
+                }}>
                   About me
                 </Link>
               </li>
               <li
-                className={`ml-6 whitespace-nowrap ${page.includes('/contact') && 'currentNavItem'}`}
+                className='ml-6 whitespace-nowrap'
               >
-                <Link className='activeNavItem p-2' href='contact'>
+                <Link className={`activeNavItem p-2 ${page.includes('/contact') && 'currentNavItem'}`} href='/#contact' onClick={(e) => {
+                  if (page === '/') {
+                    e.preventDefault()
+                    const contactSection = document.querySelector('#contact')
+                    contactSection?.scrollIntoView({ behavior: 'smooth' })
+                  }
+                  closeHandler()
+                }}>
                   Contact
                 </Link>
               </li>
             </ul>
           </nav>
         </motion.div>}
-      </AnimatePresence>
+      </AnimatePresence >
       {isVisible && <div
         className='fixed left-0 top-0 z-20 h-screen w-screen bg-black opacity-35'
-        onClick={() => closeHandler()}
-      ></div>}
+        onClick={() => {
+          closeHandler()
+        }}
+      ></div>
+      }
     </>
   );
 }

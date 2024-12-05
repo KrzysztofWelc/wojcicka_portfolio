@@ -2,12 +2,11 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { usePathname } from 'next/navigation';
 import resolveConfig from 'tailwindcss/resolveConfig';
 import tailwindConfig from '@/tailwind.config';
 import MobileNav from './MobileNav';
-import debounce from 'debounce';
 
 export default function Navbar() {
   const fullConfig = resolveConfig(tailwindConfig);
@@ -15,15 +14,20 @@ export default function Navbar() {
 
   const [isProjectsMenuVisible, setIsProjectsMenuVisible] =
     useState<boolean>(false);
+
+  const [isPlaygroundMenuVisible, setIsPlaygroundMenuVisible] =
+    useState<boolean>(false);
+
   const [isMobileNavVisible, setIsMobileNavVisible] = useState<boolean>(false);
 
   const page = usePathname();
+
 
   return (
     <header>
       <div className='navbar_gradient fixed left-0 z-10 box-border w-screen'>
         <div
-          className={`mx-10 mb-3 mt-7 flex max-w-screen-xl justify-between align-middle xl:mx-auto ${isProjectsMenuVisible && 'h-[250px]'} `}
+          className={`mx-10 mb-6 mt-7 flex max-w-screen-xl justify-between align-middle xl:mx-auto ${isProjectsMenuVisible && 'h-[250px]'} ${isPlaygroundMenuVisible && 'h-[150px]'}`}
         >
           <Link href='/'>
             <Image src='/logo.svg' alt='logo' width={200} height={50} />
@@ -32,7 +36,7 @@ export default function Navbar() {
           <nav className='max-[900px]:hidden'>
             <ul className='flex'>
               <li
-                className={`ml-6 whitespace-nowrap ${page === '/' && 'currentNavItem'}`}
+                className={`w-fit ml-6 whitespace-nowrap ${page === '/' && 'currentNavItem'}`}
               >
                 <Link className='activeNavItem p-2' href='/'>
                   Home
@@ -47,7 +51,13 @@ export default function Navbar() {
                   setIsProjectsMenuVisible(false);
                 }}
               >
-                <Link className='activeNavItem p-2' href=''>
+                <Link className='activeNavItem p-2' href='/#projects' onClick={(e) => {
+                  if (page === '/') {
+                    e.preventDefault()
+                    const contactSection = document.querySelector('#projects')
+                    contactSection?.scrollIntoView({ behavior: 'smooth' })
+                  }
+                }}>
                   Projects
                 </Link>
                 {isProjectsMenuVisible && (
@@ -68,23 +78,57 @@ export default function Navbar() {
                 )}
               </li>
               <li
-                className={`ml-6 whitespace-nowrap ${page.includes('/playground') && 'currentNavItem'}`}
+                className={`relative ml-6 whitespace-nowrap ${page.includes('/projects') && 'currentNavItem'}`}
+                onMouseEnter={() => {
+                  setIsPlaygroundMenuVisible(true);
+                }}
+                onMouseLeave={() => {
+                  setIsPlaygroundMenuVisible(false);
+                }}
               >
-                <Link className='activeNavItem p-2' href='playground'>
+                <Link className='activeNavItem p-2' href='/#playground' onClick={(e) => {
+                  if (page === '/') {
+                    e.preventDefault()
+                    const contactSection = document.querySelector('#playground')
+                    contactSection?.scrollIntoView({ behavior: 'smooth' })
+                  }
+                }}>
                   Playground
                 </Link>
+                {isPlaygroundMenuVisible && (
+                  <ul className='absolute left-0 flex flex-col pt-5 *:relative'>
+                    <li className='pt-3 text-secondary'>
+                      <Link href={'/playground/models'}>3D models</Link>
+                    </li>
+                    <li className='pt-3 text-secondary'>
+                      <Link href={'/playground/motion'}>motion vizualization</Link>
+                    </li>
+                  </ul>
+                )}
               </li>
               <li
                 className={`ml-6 whitespace-nowrap ${page.includes('/about') && 'currentNavItem'}`}
               >
-                <Link className='activeNavItem p-2' href='about'>
+                <Link className='activeNavItem p-2' href='/#about' onClick={(e) => {
+                  if (page === '/') {
+                    e.preventDefault()
+                    const contactSection = document.querySelector('#about')
+                    contactSection?.scrollIntoView({ behavior: 'smooth' })
+                  }
+                }}>
                   About me
                 </Link>
               </li>
               <li
                 className={`ml-6 whitespace-nowrap ${page.includes('/contact') && 'currentNavItem'}`}
               >
-                <Link className='activeNavItem p-2' href='contact'>
+                <Link className='activeNavItem p-2' href='/#contact' onClick={(e) => {
+                  if (page === '/') {
+                    e.preventDefault()
+                    const contactSection = document.querySelector('#contact')
+                    contactSection?.scrollIntoView({ behavior: 'smooth' })
+                  }
+                }}>
                   Contact
                 </Link>
               </li>
