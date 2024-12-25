@@ -1,9 +1,12 @@
 'use client';
 
 import Footer from '@/components/Footer';
-import Gallery from '@/components/Gallery';
 import useLightbox, { LightboxItem } from '@/hooks/useLightbox';
 import Image from 'next/image';
+
+import Header from '@/public/3d_graphic/header.png'
+import Emotion from '@/public/3d_graphic/3d_model_emotion.png'
+import Abstract from '@/public/3d_graphic/3d_model_abstract.png'
 
 export default function ESBoarding() {
     const containerId = 'containerId';
@@ -30,7 +33,8 @@ export default function ESBoarding() {
                     </div>
                     <div className='flex flex-1 flex-col'>
                         <Image
-                            src='/3d/header.png'
+                            src={Header}
+                            placeholder='blur'
                             width='0'
                             height='0'
                             sizes='100%'
@@ -63,7 +67,8 @@ export default function ESBoarding() {
                         <h3 className="h3">Anger – A Visualization of Emotion</h3>
                         <figure>
                             <Image
-                                src='/3d/anger.png'
+                                src={Emotion}
+                                placeholder='blur'
                                 width={951}
                                 height={1050}
                                 alt=''
@@ -78,7 +83,8 @@ export default function ESBoarding() {
                     <div className='mb-20'>
                         <h3 className="h3">Loop animation – A Play of Light and Form</h3>                        <figure>
                             <Image
-                                src='/3d/ice.png'
+                                src={Abstract}
+                                placeholder='blur'
                                 width={951}
                                 height={1050}
                                 alt=''
@@ -92,13 +98,11 @@ export default function ESBoarding() {
                     <div className='mb-20'>
                         <h3 className="h3">Loop animation – A Play of Light and Form</h3>
                         <figure>
-                            <Image
-                                src='/3d/loop.png'
-                                width={951}
-                                height={1050}
-                                alt=''
-                                className='mb-8 w-full'
-                            />
+                            <video controls loop autoplay preload="auto" muted className='mx-auto mb-3'>
+                                <source src="/3d_graphic/3d_animation.mp4" type="video/mp4" />
+
+                                Your browser does not support the video tag.
+                            </video>
                             <figcaption>
                                 <p>This seamless loop animation is an exploration of light interacting with simple, geometric shapes. This piece embodies the hypnotic beauty of minimalism in motion. By focusing on clean rectangular and circular forms and carefully crafted lighting, I aimed to create a calming, satisfying experience that draws viewers in with its subtle rhythm and balance.</p>
                             </figcaption>

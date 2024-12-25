@@ -8,6 +8,8 @@ import resolveConfig from 'tailwindcss/resolveConfig';
 import tailwindConfig from '@/tailwind.config';
 import MobileNav from './MobileNav';
 
+import Logo from '@/public/homepage/logo.svg'
+
 export default function Navbar() {
   const fullConfig = resolveConfig(tailwindConfig);
   const lgWidth = parseInt(fullConfig.theme.screens.lg, 10);
@@ -30,7 +32,7 @@ export default function Navbar() {
           className={`mx-10 mb-6 mt-7 flex max-w-screen-xl justify-between align-middle xl:mx-auto ${isProjectsMenuVisible && 'h-[250px]'} ${isPlaygroundMenuVisible && 'h-[150px]'}`}
         >
           <Link href='/'>
-            <Image src='/logo.svg' alt='logo' width={200} height={50} />
+            <Image src={Logo} alt='logo' width={200} height={50} />
           </Link>
 
           <nav className='max-[900px]:hidden'>
