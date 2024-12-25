@@ -1,6 +1,10 @@
 import Link from 'next/link';
 import Image from 'next/image';
 
+import LIIcon from '@/public/homepage/icon_linkedin.svg'
+import MailIcon from '@/public/homepage/icon_mail.svg'
+import WAIcon from '@/public/homepage/icon_whatsapp.svg'
+
 export default function Footer() {
   return (
     <footer id='contact' className='absolute left-0 w-screen bg-backbround px-12 py-6 md:px-24 md:py-12'>
@@ -15,7 +19,7 @@ export default function Footer() {
         <Link href='/'>
           <Image
             className='size-8 md:size-11'
-            src='/in.svg'
+            src={LIIcon}
             height={52}
             width={52}
             alt='linkedin logo'
@@ -24,7 +28,7 @@ export default function Footer() {
         <Link href='/'>
           <Image
             className='size-8 md:size-11'
-            src='/mail.svg'
+            src={MailIcon}
             height={52}
             width={52}
             alt='linkedin logo'
@@ -33,7 +37,7 @@ export default function Footer() {
         <Link href='/'>
           <Image
             className='size-8 md:size-11'
-            src='/whatsapp.svg'
+            src={WAIcon}
             height={52}
             width={52}
             alt='linkedin logo'

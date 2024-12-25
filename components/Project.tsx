@@ -1,8 +1,8 @@
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import Link from 'next/link';
 
 interface ProjectProps {
-  image: string;
+  image: StaticImageData;
   imageAlt: string;
   title: string;
   tags: string;
@@ -23,6 +23,7 @@ export default function Project({
           <Image
             src={image}
             alt={imageAlt}
+            placeholder='blur'
             width='0'
             height='0'
             quality={100}

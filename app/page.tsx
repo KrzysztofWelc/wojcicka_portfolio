@@ -5,6 +5,15 @@ import Project from '@/components/Project';
 import Image from 'next/image';
 import { useRef } from 'react';
 
+import HomepageImage from '@/public/homepage/homepage_image.jpeg'
+import ESBoarding from '@/public/homepage/esboarding.png'
+import Guardgo from '@/public/homepage/guardgo.png'
+// import Ninateka from '@/public/homepage/ninateka.png'
+// import Szczecin from '@/public/homepage/szczecin_philharmonic.png'
+import TDModels from '@/public/homepage/3d_models.jpeg'
+import Motion from '@/public/homepage/motion_visualisation.jpeg'
+
+
 export default function Home() {
   const projectsSectionRef = useRef<HTMLDivElement>(null);
 
@@ -40,7 +49,8 @@ export default function Home() {
           </div>
           <div className='flex flex-1 flex-col'>
             <Image
-              src='/computer.png'
+              src={HomepageImage}
+              placeholder='blur'
               width='0'
               height='0'
               sizes='100%'
@@ -57,14 +67,14 @@ export default function Home() {
             title='ESBoarding'
             tags='UX/UI | Mobile | Onboarding | Gamification'
             description={`Gamified app to enhance onboarding experience for international students.`}
-            image='/ESBoarding.png'
+            image={ESBoarding}
             imageAlt='A smartphone'
           />
           <Project
             title='GuardGo'
             tags='UX/UI | Smartwatch | Safety'
             description={`A wearable application to increase the users' sense of security.`}
-            image='/guardGo.png'
+            image={Guardgo}
             imageAlt='A smart watch'
           />
         </div>
@@ -75,13 +85,13 @@ export default function Home() {
           <Project
             title='3D Models'
             tags='3D Models | Abstract | Blender'
-            image='/3DModels.png'
+            image={TDModels}
             imageAlt='An abstrtact shape'
           />
           <Project
             title='Mercedes-Benz motion visualisation'
             tags='Loop animation | Unity 3D'
-            image='/mercedes.png'
+            image={Motion}
             imageAlt='A mercedes car surrounded by abstract shapes.'
           />
         </div>
