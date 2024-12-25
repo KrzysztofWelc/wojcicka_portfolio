@@ -5,6 +5,27 @@ import Gallery from '@/components/Gallery';
 import useLightbox, { LightboxItem } from '@/hooks/useLightbox';
 import Image from 'next/image';
 
+import Header from '@/public/esboarding/esboarding_mockup.png'
+import Wireframe1 from '@/public/esboarding/early_wireframes_1.jpg'
+import Wireframe2 from '@/public/esboarding/early_wireframes_2.jpg'
+import Wireframe3 from '@/public/esboarding/early_wireframes_3.jpg'
+import Wireframe4 from '@/public/esboarding/early_wireframes_4.jpg'
+import Wireframe5 from '@/public/esboarding/early_wireframes_5.jpg'
+import Mockup1 from '@/public/esboarding/free_iphone_13_pro_mockup_2_1.png'
+import Mockup2 from '@/public/esboarding/free_iphone_13_pro_mockup_2_2.png'
+import Mockup3 from '@/public/esboarding/free_iphone_13_pro_mockup_2_3.png'
+import Mockup4 from '@/public/esboarding/free_iphone_13_pro_mockup_2_4.png'
+import Persona1 from '@/public/esboarding/persona_1.png'
+import Persona2 from '@/public/esboarding/persona_2.png'
+import Icon1 from '@/public/esboarding/icon_1.svg'
+import Icon2 from '@/public/esboarding/icon_2.svg'
+import Icon3 from '@/public/esboarding/icon_3.svg'
+import Icon4 from '@/public/esboarding/icon_4.svg'
+import Icon5 from '@/public/esboarding/icon_5.svg'
+import IconArrow from '@/public/esboarding/icon_arrow.svg'
+import InformationArchitecture from '@/public/esboarding/information_architecture.png'
+import UILib from '@/public/esboarding/ui_library_components.png'
+
 export default function ESBoarding() {
   const containerId = 'containerId';
   const lightBoxItemClass = 'lightboxItem';
@@ -31,7 +52,8 @@ export default function ESBoarding() {
           </div>
           <div className='flex flex-1 flex-col'>
             <Image
-              src='/esb/headerImage.png'
+              src={Header}
+              placeholder='blur'
               width='0'
               height='0'
               sizes='100%'
@@ -150,7 +172,7 @@ export default function ESBoarding() {
             <div className='mx-2 flex-col py-10 md:mx-10'>
               <div className='mb-10 flex flex-col items-center gap-7 md:flex-row'>
                 <Image
-                  src='/esb/keyFindings/i.svg'
+                  src={Icon1}
                   width={70}
                   height={70}
                   alt='a man figure'
@@ -163,7 +185,7 @@ export default function ESBoarding() {
               </div>
               <div className='mb-10 flex flex-col items-center gap-7 md:flex-row'>
                 <Image
-                  src='/esb/keyFindings/phone.svg'
+                  src={Icon2}
                   width={70}
                   height={70}
                   alt='a clock'
@@ -178,7 +200,7 @@ export default function ESBoarding() {
 
               <div className='mb-10 flex flex-col items-center gap-7 md:flex-row'>
                 <Image
-                  src='/esb/keyFindings/man.svg'
+                  src={Icon3}
                   width={70}
                   height={70}
                   alt='a pocation pin'
@@ -192,7 +214,7 @@ export default function ESBoarding() {
               </div>
               <div className='mb-10 flex flex-col items-center gap-7 md:flex-row'>
                 <Image
-                  src='/esb/keyFindings/puzzle.svg'
+                  src={Icon4}
                   width={70}
                   height={70}
                   alt='a hand'
@@ -206,7 +228,7 @@ export default function ESBoarding() {
               </div>
               <div className='flex flex-col items-center gap-7 md:flex-row'>
                 <Image
-                  src='/esb/keyFindings/lang.svg'
+                  src={Icon5}
                   width={70}
                   height={70}
                   alt='a hand'
@@ -222,7 +244,7 @@ export default function ESBoarding() {
           </div>
 
           <div className='flex items-center justify-center p-16'>
-            <Image src='/arrow.svg' width={70} height={70} alt='a dow arrow' />
+            <Image src={IconArrow} width={70} height={70} alt='a dow arrow' />
           </div>
 
           <div>
@@ -237,15 +259,17 @@ export default function ESBoarding() {
 
             <Gallery>
               <Image
-                src='/esb/personas/migel.png'
-                width={870}
-                height={1231}
+                src={Persona1}
+                width={Persona2.width}
+                height={Persona2.height}
+                placeholder='blur'
                 alt='persona card of Migel'
               />
               <Image
-                src='/esb/personas/anna.png'
-                width={870}
-                height={1231}
+                src={Persona2}
+                width={Persona2.width}
+                height={Persona2.height}
+                placeholder='blur'
                 alt='persona card of Anna'
               />
             </Gallery>
@@ -304,15 +328,15 @@ export default function ESBoarding() {
             </p>
           </div>
           <LightboxItem
-            width={1051}
-            height={784}
+            width={InformationArchitecture.width}
+            height={InformationArchitecture.height}
             className={lightBoxItemClass}
-            url='/esb/chart.png'
+            url={InformationArchitecture.src}
           >
             <Image
-              src='/esb/chart.png'
-              width={1051}
-              height={784}
+              src={InformationArchitecture}
+              width={InformationArchitecture.width}
+              height={InformationArchitecture.height}
               alt='ESBoarding flow chart'
               className={`mb-10`}
             />
@@ -322,37 +346,31 @@ export default function ESBoarding() {
             <h3 className='h3'>Early wireframes</h3>
             <Gallery>
               <Image
-                src='/esb/earlyWireframes/1.png'
+                src={Wireframe1}
                 width={1087}
                 height={753}
                 alt=''
               />
               <Image
-                src='/esb/earlyWireframes/2.png'
+                src={Wireframe2}
                 width={1087}
                 height={753}
                 alt=''
               />
               <Image
-                src='/esb/earlyWireframes/3.png'
+                src={Wireframe3}
                 width={1087}
                 height={753}
                 alt=''
               />
               <Image
-                src='/esb/earlyWireframes/4.png'
+                src={Wireframe4}
                 width={1087}
                 height={753}
                 alt=''
               />
               <Image
-                src='/esb/earlyWireframes/5.png'
-                width={1087}
-                height={753}
-                alt=''
-              />
-              <Image
-                src='/esb/earlyWireframes/6.png'
+                src={Wireframe5}
                 width={1087}
                 height={753}
                 alt=''
@@ -365,15 +383,15 @@ export default function ESBoarding() {
           <div className='mb-10'>
             <h3 className='h3'>UI Library Conponents</h3>
             <LightboxItem
-              width={1050}
-              height={568}
+              width={UILib.width}
+              height={UILib.height}
               className={lightBoxItemClass}
-              url='/esb/UIComponents.png'
+              url={UILib.src}
             >
               <Image
-                src='/esb/UIComponents.png'
-                width={1050}
-                height={568}
+                src={UILib}
+                width={UILib.width}
+                height={UILib.height}
                 alt=''
               />
             </LightboxItem>
@@ -382,27 +400,27 @@ export default function ESBoarding() {
             <h3 className='h3'>Final Designs</h3>
             <Gallery>
               <Image
-                src='/esb/finalDesigns/1.png'
-                width={1068}
-                height={800}
+                src={Mockup1}
+                width={Mockup1.width}
+                height={Mockup1.height}
                 alt=''
               />
               <Image
-                src='/esb/finalDesigns/2.png'
-                width={1068}
-                height={800}
+                src={Mockup2}
+                width={Mockup2.width}
+                height={Mockup2.height}
                 alt=''
               />
               <Image
-                src='/esb/finalDesigns/3.png'
-                width={1068}
-                height={800}
+                src={Mockup3}
+                width={Mockup3.width}
+                height={Mockup3.height}
                 alt=''
               />
               <Image
-                src='/esb/finalDesigns/4.png'
-                width={1068}
-                height={800}
+                src={Mockup4}
+                width={Mockup4.width}
+                height={Mockup4.height}
                 alt=''
               />
             </Gallery>
