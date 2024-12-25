@@ -50,7 +50,7 @@ export default function Gallery({ children }: any) {
         return (
           <SwiperSlide key={i.props.src}>
             <a
-              href={i.props.src}
+              href={i.props.src.src}
               data-pswp-width={i.props.width}
               data-pswp-height={i.props.height}
               className='text-center'

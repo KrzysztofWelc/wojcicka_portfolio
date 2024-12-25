@@ -4,9 +4,27 @@ import Footer from '@/components/Footer';
 import Gallery from '@/components/Gallery';
 import Message from '@/components/Message';
 import MoodBoard from '@/components/MoodBoard';
-import Table from '@/components/Table';
 import useLightbox, { LightboxItem } from '@/hooks/useLightbox';
 import Image from 'next/image';
+
+import Header from '@/public/guardgo/apple_watch_mockup.png'
+import Icon1 from '@/public/guardgo/icon_1.svg'
+import Icon2 from '@/public/guardgo/icon_2.svg'
+import Icon3 from '@/public/guardgo/icon_3.svg'
+import Icon4 from '@/public/guardgo/icon_4.svg'
+import Table from '@/public/guardgo/tabela.png'
+import Watch from '@/public/guardgo/icon_smartwatch.svg'
+import Arrow from '@/public/guardgo/icon_arrow.svg'
+import Wireframes from '@/public/guardgo/early_wireframes.jpg'
+import UserFlow from '@/public/guardgo/user_flow.png'
+import FinalDesign1 from '@/public/guardgo/final_design_1.png'
+import FinalDesign2 from '@/public/guardgo/final_design_2.png'
+import FinalDesign3 from '@/public/guardgo/final_design_3.png'
+import FinalDesign4 from '@/public/guardgo/final_design_4.png'
+import FinalDesign5 from '@/public/guardgo/final_design_5.png'
+
+
+
 
 export default function GuardGo() {
   const containerId = 'containerId';
@@ -34,7 +52,8 @@ export default function GuardGo() {
           </div>
           <div className='flex flex-1 flex-col'>
             <Image
-              src='/guardGo2.png'
+              src={Header}
+              placeholder='blur'
               width='0'
               height='0'
               sizes='100%'
@@ -129,7 +148,7 @@ export default function GuardGo() {
               <div className='mx-2 flex-col py-10 md:mx-10'>
                 <div className='mb-10 flex flex-col items-center gap-7 md:flex-row'>
                   <Image
-                    src='/man.svg'
+                    src={Icon1}
                     width={70}
                     height={70}
                     alt='a man figure'
@@ -142,7 +161,7 @@ export default function GuardGo() {
                 </div>
                 <div className='mb-10 flex flex-col items-center gap-7 md:flex-row'>
                   <Image
-                    src='/clock.svg'
+                    src={Icon2}
                     width={70}
                     height={70}
                     alt='a clock'
@@ -155,7 +174,7 @@ export default function GuardGo() {
 
                 <div className='mb-10 flex flex-col items-center gap-7 md:flex-row'>
                   <Image
-                    src='/pin.svg'
+                    src={Icon3}
                     width={70}
                     height={70}
                     alt='a pocation pin'
@@ -166,7 +185,7 @@ export default function GuardGo() {
                   </p>
                 </div>
                 <div className='flex flex-col items-center gap-7 md:flex-row'>
-                  <Image src='/hand.svg' width={70} height={70} alt='a hand' />
+                  <Image src={Icon4} width={70} height={70} alt='a hand' />
                   <p>
                     A disadvantage of using a phone is that hands are not free
                     and might be needed for self-defense.
@@ -177,7 +196,7 @@ export default function GuardGo() {
 
             <div className='flex items-center justify-center p-16'>
               <Image
-                src='/arrow.svg'
+                src={Arrow}
                 width={70}
                 height={70}
                 alt='a dow arrow'
@@ -211,13 +230,20 @@ export default function GuardGo() {
               </p>
             </div>
 
-            {/* <Table /> */}
+            <LightboxItem
+              width={7296} height={8264}
+              className={lightBoxItemClass}
+              url='/guardgo/tabela.png'
+            >
+              <Image src={Table} width={7296} height={8264} alt='requirements table' />
+            </LightboxItem>
+
 
             <div className='mb-10 flex flex-col items-center gap-10 md:flex-row'>
               <Image
                 width={140}
                 height={258}
-                src='/watch_icon.svg'
+                src={Watch}
                 alt='a watch'
               />
               <div>
@@ -250,13 +276,13 @@ export default function GuardGo() {
                 width={1050}
                 height={1520}
                 className={lightBoxItemClass}
-                url='/user_flow.png'
+                url='/guardgo/user_flow.png'
               >
                 <Image
                   className='w-full'
                   width={1050}
                   height={1520}
-                  src='/user_flow.png'
+                  src={UserFlow}
                   alt='a diagram describing user flow'
                 />
               </LightboxItem>
@@ -265,16 +291,16 @@ export default function GuardGo() {
             <div className='mb-10'>
               <h3 className='h3'>Early wireframes</h3>
               <LightboxItem
-                width={1063}
-                height={555}
+                width={Wireframes.width}
+                height={Wireframes.height}
                 className={lightBoxItemClass}
-                url='/early_wireframes.png'
+                url='/guardgo/early_wireframes.jpg'
               >
                 <Image
                   className='w-full'
-                  width={1050}
-                  height={1520}
-                  src='/early_wireframes.png'
+                  width={Wireframes.width}
+                  height={Wireframes.height}
+                  src={Wireframes}
                   alt='a diagram describing user flow'
                 />
               </LightboxItem>
@@ -302,33 +328,33 @@ export default function GuardGo() {
               <h3 className='h3'>Final design</h3>
               <Gallery>
                 <Image
-                  src='/finalDesign/1.png'
-                  width={1050}
-                  height={787}
+                  src={FinalDesign1}
+                  width={FinalDesign1.width}
+                  height={FinalDesign1.height}
                   alt='a smart watch with guard go welcome screen'
                 />
                 <Image
-                  src='/finalDesign/2.png'
-                  width={1050}
-                  height={787}
+                  src={FinalDesign2}
+                  width={FinalDesign2.width}
+                  height={FinalDesign2.height}
                   alt='a smart watch with guard go welcome screen'
                 />
                 <Image
-                  src='/finalDesign/3.png'
-                  width={1050}
-                  height={787}
+                  src={FinalDesign3}
+                  width={FinalDesign3.width}
+                  height={FinalDesign3.height}
                   alt='a smart watch with guard go welcome screen'
                 />
                 <Image
-                  src='/finalDesign/4.png'
-                  width={1050}
-                  height={787}
+                  src={FinalDesign4}
+                  width={FinalDesign4.width}
+                  height={FinalDesign4.height}
                   alt='a smart watch with guard go welcome screen'
                 />
                 <Image
-                  src='/finalDesign/5.png'
-                  width={1050}
-                  height={787}
+                  src={FinalDesign5}
+                  width={FinalDesign5.width}
+                  height={FinalDesign5.height}
                   alt='a smart watch with guard go welcome screen'
                 />
               </Gallery>
