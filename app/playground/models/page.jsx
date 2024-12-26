@@ -98,7 +98,7 @@ export default function ESBoarding() {
                     <div className='mb-20'>
                         <h3 className="h3">Loop animation – A Play of Light and Form</h3>
                         <figure>
-                            <video controls loop autoplay preload="auto" muted className='mx-auto mb-3'>
+                            <video controls loop autoPlay preload="auto" muted className='mx-auto mb-3'>
                                 <source src="/3d_graphic/3d_animation.mp4" type="video/mp4" />
 
                                 Your browser does not support the video tag.
