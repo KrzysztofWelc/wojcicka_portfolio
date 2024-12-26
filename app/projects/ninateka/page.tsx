@@ -5,6 +5,19 @@ import Gallery from '@/components/Gallery';
 import useLightbox, { LightboxItem } from '@/hooks/useLightbox';
 import Image from 'next/image';
 
+import Header from '@/public/ninateka/samung-tv-mockup_2.png'
+import Mock3 from '@/public/ninateka/samung-tv-mockup_3.png'
+import Mock4 from '@/public/ninateka/samung-tv-mockup_4.png'
+import Mock5 from '@/public/ninateka/samung-tv-mockup_5.png'
+import Mock6 from '@/public/ninateka/samung-tv-mockup_6.png'
+import Table from '@/public/ninateka/tabela.png'
+import IA from '@/public/ninateka/IA.png'
+import Icon1 from '@/public/ninateka/icon1.svg'
+import Icon2 from '@/public/ninateka/icon2.svg'
+import Icon3 from '@/public/ninateka/icon3.svg'
+import Icon4 from '@/public/ninateka/icon4.svg'
+import Icon5 from '@/public/ninateka/icon5.svg'
+
 export default function ESBoarding() {
     const containerId = 'containerId';
     const lightBoxItemClass = 'lightboxItem';
@@ -30,7 +43,8 @@ export default function ESBoarding() {
                     </div>
                     <div className='flex flex-1 flex-col'>
                         <Image
-                            src='/ninateka/tv.png'
+                            src={Header}
+                            placeholder='blur'
                             width='0'
                             height='0'
                             sizes='100%'
@@ -149,7 +163,7 @@ export default function ESBoarding() {
                         <div className='mx-2 flex-col py-10 md:mx-10'>
                             <div className='mb-10 flex flex-col items-center gap-7 md:flex-row'>
                                 <Image
-                                    src='/ninateka/assumptions/1.svg'
+                                    src={Icon1}
                                     width={70}
                                     height={70}
                                     alt='a man figure'
@@ -163,7 +177,7 @@ export default function ESBoarding() {
                             </div>
                             <div className='mb-10 flex flex-col items-center gap-7 md:flex-row'>
                                 <Image
-                                    src='/ninateka/assumptions/2.svg'
+                                    src={Icon2}
                                     width={70}
                                     height={70}
                                     alt='a clock'
@@ -180,7 +194,7 @@ export default function ESBoarding() {
 
                             <div className='mb-10 flex flex-col items-center gap-7 md:flex-row'>
                                 <Image
-                                    src='/ninateka/assumptions/3.svg'
+                                    src={Icon3}
                                     width={70}
                                     height={70}
                                     alt='a pocation pin'
@@ -195,7 +209,7 @@ export default function ESBoarding() {
                             </div>
                             <div className='mb-10 flex flex-col items-center gap-7 md:flex-row'>
                                 <Image
-                                    src='/ninateka/assumptions/4.svg'
+                                    src={Icon4}
                                     width={70}
                                     height={70}
                                     alt='a hand'
@@ -208,7 +222,7 @@ export default function ESBoarding() {
                             </div>
                             <div className='flex flex-col items-center gap-7 md:flex-row'>
                                 <Image
-                                    src='/ninateka/assumptions/5.svg'
+                                    src={Icon5}
                                     width={70}
                                     height={70}
                                     alt='a hand'
@@ -222,6 +236,15 @@ export default function ESBoarding() {
                             </div>
                         </div>
                     </div>
+                    <h3 className="h3">Core features</h3>
+                    <LightboxItem
+                        className={lightBoxItemClass}
+                        url={Table.src}
+                        width={Table.width} height={Table.height}
+                    >
+                        <Image src={Table} width={Table.width} height={Table.height} alt='' />
+                    </LightboxItem>
+
                 </section>
                 <h2 className='mb-20 text-4xl'>Project description</h2>
                 <section className='mx-10'>
@@ -243,7 +266,7 @@ export default function ESBoarding() {
                     </p>
                 </section>
                 <div className='flex items-center justify-center p-16'>
-                    <Image src='/arrow.svg' width={70} height={70} alt='a dow arrow' />
+                    <Image src='/esboarding/icon_arrow.svg' width={70} height={70} alt='a dow arrow' />
                 </div>
 
                 <h2 className='mb-20 text-4xl'>UX Design</h2>
@@ -265,11 +288,10 @@ export default function ESBoarding() {
                     </p>
                     <LightboxItem
                         className={lightBoxItemClass}
-                        url='/ninateka/chart.png'
-                        width={1063}
-                        height={465}
+                        url={IA.src}
+                        width={IA.width} height={IA.height}
                     >
-                        <Image src='/ninateka/chart.png' width={1063} height={465} alt='' />
+                        <Image src={IA} width={IA.width} height={IA.height} alt='' />
                     </LightboxItem>
                 </section>
                 <h2 className='mb-20 text-4xl'>UX Design</h2>
@@ -277,34 +299,35 @@ export default function ESBoarding() {
                     <h3 className='h3'>Final Design</h3>
                     <Gallery>
                         <Image
-                            src='/ninateka/final/1.png'
-                            width={1180}
-                            height={885}
-                            alt=''
-                        />
-                        <Image
-                            src='/ninateka/final/2.png'
+                            src={Header}
                             width={1180}
                             height={885}
                             alt=''
                         />
 
                         <Image
-                            src='/ninateka/final/3.png'
+                            src={Mock3}
                             width={1180}
                             height={885}
                             alt=''
                         />
 
                         <Image
-                            src='/ninateka/final/4.png'
+                            src={Mock4}
                             width={1180}
                             height={885}
                             alt=''
                         />
 
                         <Image
-                            src='/ninateka/final/5.png'
+                            src={Mock5}
+                            width={1180}
+                            height={885}
+                            alt=''
+                        />
+
+                        <Image
+                            src={Mock6}
                             width={1180}
                             height={885}
                             alt=''
