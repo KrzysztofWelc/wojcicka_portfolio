@@ -12,6 +12,8 @@ import Guardgo from '@/public/homepage/guardgo.png'
 // import Szczecin from '@/public/homepage/szczecin_philharmonic.png'
 import TDModels from '@/public/homepage/3d_models.jpeg'
 import Motion from '@/public/homepage/motion_visualisation.jpeg'
+import About from '@/components/About';
+import AboutImage from '@/public/homepage/about_me.png';
 
 
 export default function Home() {
@@ -98,39 +100,15 @@ export default function Home() {
       </section>
       <section id='about' className='pb-16'>
         <h2 className='mb-16 text-3xl font-bold tracking-wide'>About me</h2>
-        <div className='flex min-h-screen w-full flex-col justify-center md:flex-row'>
-          <div className='flex flex-1'>
-            <Image
-              src='/about.png'
-              className='my-auto w-full'
-              width='0'
-              height='0'
-              sizes='100%'
-              alt='Woman sitting at computer'
-            ></Image>
-          </div>
-          <div className='flex-1 text-2xl'>
-            <p className='mb-[36px] leading-10'>
-              I&apos;m a UX/UI designer, currently working at Mercedes-Benz UI
-              Concepts in Sindelfingen, Germany. With a master&apos;s degree in
-              Social Informatics (specialization: Design and Product
-              Development) and a double degree in International Management from
-              ESB Business School (Germany) and Jagiellonian University
-              (Poland), I bring a multidimensional perspective to my design
-              work.
-            </p>
-            <p className='mb-[36px] leading-10'>
-              Over the years, I&apos;ve taken part in various UX projects,
-              managing them from user research to prototyping and usability
-              testing. My international experience helps me understand diverse
-              user needs and create intuitive solutions. Fluent in Polish,
-              German, and English, I connect easily with users and stakeholders.
-            </p>
-            <p>
-              Outside of work, I enjoy nature, travels, playing guitar and
-              savoring a good cup of coffee.
-            </p>
-          </div>
+        <div className="flex gap-14 justify-between flex-col-reverse items-center xl:flex-row">
+          <Image
+            src={AboutImage}
+            width={AboutImage.width}
+            height={AboutImage.height}
+            alt=''
+            className='object-contain  '
+          />
+          <About />
         </div>
       </section>
       <section className='mx-auto mt-9 flex flex-col justify-between gap-12 gap-x-12 px-12 sm:flex-row'>

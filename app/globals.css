@@ -15,12 +15,10 @@ html {
 
 .navbar_gradient {
   background: rgb(255, 255, 255);
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(255, 255, 255, 1) 80%,
-    rgba(255, 255, 255, 0) 100%
-  );
+  background: linear-gradient(180deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(255, 255, 255, 1) 80%,
+      rgba(255, 255, 255, 0) 100%);
 }
 
 @layer utilities {
@@ -46,5 +44,13 @@ html {
 
   .highlightedText {
     @apply font-semibold tracking-wide text-primary;
+  }
+
+  .aboutBtn {
+    @apply px-5 py-2 font-light border-secondary border-[1px] rounded-sm text-secondary
+  }
+
+  .activeAboutBtn {
+    @apply px-5 py-2 font-semibold border-secondary border-[1px] rounded-full text-secondary
   }
 }
