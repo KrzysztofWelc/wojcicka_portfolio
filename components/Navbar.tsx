@@ -103,7 +103,7 @@ export default function Navbar() {
                       <Link href={'/playground/models'}>3D models</Link>
                     </li>
                     <li className='pt-3 text-secondary'>
-                      <Link href={'/playground/motion'}>motion vizualization</Link>
+                      <Link href={'/playground/motion_visualisation'}>motion vizualization</Link>
                     </li>
                   </ul>
                 )}
