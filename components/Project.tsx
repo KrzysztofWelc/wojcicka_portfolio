@@ -24,11 +24,11 @@ export default function Project({
             src={image}
             alt={imageAlt}
             placeholder='blur'
-            width='0'
-            height='0'
+            width={image.width}
+            height={image.height}
             quality={100}
-            sizes='100%'
-            className='w-full duration-500 group-hover:scale-110'
+            // sizes='100%'
+            className={`w-full duration-500 group-hover:scale-110 h-[20rem] object-cover`}
           />
         </div>
         <figcaption>
