@@ -73,14 +73,21 @@ export default function ESBoarding() {
                         <h3 className="h3">Moodboard</h3>                        <figure>
                             <figcaption>
                                 <p>To define the visual direction, I developed a moodboard that reflects the essence of the project.</p>                            </figcaption>
-                            <Image
-                                src={Moodboard}
-                                placeholder='blur'
-                                width={Moodboard.width}
-                                height={Moodboard.height}
-                                alt=''
-                                className='mb-8 w-full'
-                            />
+                            <LightboxItem
+                                width={Moodboard.width} height={Moodboard.height}
+                                className={lightBoxItemClass}
+                                url={Moodboard.src}
+                            >
+                                <Image
+                                    src={Moodboard}
+                                    placeholder='blur'
+                                    width={Moodboard.width}
+                                    height={Moodboard.height}
+                                    alt=''
+                                    className='mb-8 w-full'
+                                />
+                            </LightboxItem>
+
                         </figure>
                     </div>
                     <div className='mb-20'>
@@ -98,34 +105,51 @@ export default function ESBoarding() {
                         <h3 className="h3">Sketch</h3>
                         <p>Before beginning development, I created a detailed plan outlining the project&apos;s structure. The focus was on ensuring a seamless experience, with the animation designed to loop perfectly.</p>
                         <p>Later on, I discovered that I couldn’t execute this idea in the exact form I had envisioned. I hadn’t accounted for differences in lighting, which made it impossible to create a seamless loop. As a result, the animation starts and ends in a different position than originally planned.</p>
-                        <Image
-                            src={Drawing}
-                            width={Drawing.width}
-                            height={Drawing.height}
-                            alt=''
-                            placeholder='blur'
-                            className='mx-auto'
-                        />
+                        <LightboxItem
+                            width={Drawing.width} height={Drawing.height}
+                            className={lightBoxItemClass}
+                            url={Drawing.src}
+                        >
+                            <Image
+                                src={Drawing}
+                                width={Drawing.width}
+                                height={Drawing.height}
+                                alt=''
+                                placeholder='blur'
+                                className='mx-auto'
+                            />
+                        </LightboxItem>
+
                     </div>
                 </section>
                 <h2 className='mb-20 text-4xl'>Unity 3D</h2>
                 <section className="mx-10">
                     <p>Although I had prior experience learning Unity, this project served as a playground for applying and testing my knowledge in a practical setting. To further refine my skills, I completed two official Unity certifications before starting the project: <span className='highlightedText'>Unity Essentials</span> and <span className='highlightedText'>Unity Creative Core</span>.These courses expanded my understanding of Unity’s tools and workflows, providing the foundation needed to confidently tackle this visualization.</p>
-                    <div className="flex justify-around">
-                        <Image
-                            src={Badge1}
-                            width={Badge1.width}
-                            height={Badge1.height}
-                            alt=''
-                            placeholder='blur'
-                        />
-                        <Image
-                            src={Badge2}
-                            width={Badge2.width}
-                            height={Badge2.height}
-                            alt=''
-                            placeholder='blur'
-                        />
+                    <div className="flex justify-around my-9 max-w-full overflow-x-auto">
+                        <LightboxItem
+                            width={Badge1.width} height={Badge1.height}
+                            className={lightBoxItemClass}
+                            url={Badge1.src}
+                        > <Image
+                                src={Badge1}
+                                width={Badge1.width}
+                                height={Badge1.height}
+                                alt=''
+                                placeholder='blur'
+                            />
+                        </LightboxItem>
+                        <LightboxItem
+                            width={Badge2.width} height={Badge2.height}
+                            className={lightBoxItemClass}
+                            url={Badge2.src}
+                        ><Image
+                                src={Badge2}
+                                width={Badge2.width}
+                                height={Badge2.height}
+                                alt=''
+                                placeholder='blur'
+                            />
+                        </LightboxItem>
                     </div>
                 </section>
                 <h2 className='mb-20 text-4xl'>Final Video</h2>
