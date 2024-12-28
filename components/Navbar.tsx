@@ -80,7 +80,7 @@ export default function Navbar() {
                 )}
               </li>
               <li
-                className={`relative ml-6 whitespace-nowrap ${page.includes('/projects') && 'currentNavItem'}`}
+                className={`relative ml-6 whitespace-nowrap ${page.includes('/playground') && 'currentNavItem'}`}
                 onMouseEnter={() => {
                   setIsPlaygroundMenuVisible(true);
                 }}
