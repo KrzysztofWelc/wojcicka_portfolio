@@ -67,7 +67,7 @@ export default function ESBoarding() {
                 <section className="mx-10">
                     <div className='mb-20'>
                         <h3 className="h3">Idea</h3>
-                        <p>The concept was to create a minimalist yet luxurious animation that embodies the elegance and sophistication of Mercedes-Benz. The visualization focuses on smooth, loopable camera movements and dynamic lighting that accentuate the car's form and textures.</p>
+                        <p>The concept was to create a minimalist yet luxurious animation that embodies the elegance and sophistication of Mercedes-Benz. The visualization focuses on smooth, loopable camera movements and dynamic lighting that accentuate the car&apos;s form and textures.</p>
                     </div>
                     <div className='mb-20'>
                         <h3 className="h3">Moodboard</h3>                        <figure>
@@ -96,7 +96,7 @@ export default function ESBoarding() {
                     </div>
                     <div className='mb-20'>
                         <h3 className="h3">Sketch</h3>
-                        <p>Before beginning development, I created a detailed plan outlining the project's structure. The focus was on ensuring a seamless experience, with the animation designed to loop perfectly.</p>
+                        <p>Before beginning development, I created a detailed plan outlining the project&apos;s structure. The focus was on ensuring a seamless experience, with the animation designed to loop perfectly.</p>
                         <p>Later on, I discovered that I couldn’t execute this idea in the exact form I had envisioned. I hadn’t accounted for differences in lighting, which made it impossible to create a seamless loop. As a result, the animation starts and ends in a different position than originally planned.</p>
                         <Image
                             src={Drawing}
