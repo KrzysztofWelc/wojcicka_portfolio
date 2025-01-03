@@ -100,7 +100,7 @@ export default function Home() {
       </section>
       <section id='about' className='pb-16'>
         <h2 className='mb-16 text-3xl font-bold tracking-wide'>About me</h2>
-        <div className="flex gap-14 justify-between flex-col-reverse items-center xl:flex-row">
+        <div className="flex gap-14 justify-between items-start flex-col-reverse xl:flex-row">
           <Image
             src={AboutImage}
             width={AboutImage.width}
@@ -111,40 +111,7 @@ export default function Home() {
           <About />
         </div>
       </section>
-      <section className='mx-auto mt-9 flex flex-col justify-between gap-12 gap-x-12 px-12 sm:flex-row'>
-        <div className='flex flex-col'>
-          <h3 className='mb-4 text-3xl font-bold'>Skills</h3>
-          <ul className='text-2xl leading-10'>
-            <li>Product design</li>
-            <li>UX research</li>
-            <li>Wireframing</li>
-            <li>Usability testing</li>
-            <li>Visual Design</li>
-            <li>Project management</li>
-            <li>3D projects</li>
-            <li>3D animation</li>
-          </ul>
-        </div>
-        <div className='flex flex-col'>
-          <h3 className='mb-4 text-3xl font-bold'>Tools</h3>
-          <ul className='text-2xl leading-10'>
-            <li>Figma</li>
-            <li>Adobe Photoshop</li>
-            <li>Adobe Illustrator</li>
-            <li>Blender</li>
-            <li>Unity 3D</li>
-          </ul>
-        </div>
-        <div className='flex flex-col'>
-          <h3 className='mb-4 text-3xl font-bold'>Aside from design</h3>
-          <ul className='text-2xl leading-10'>
-            <li>Playing the guitar</li>
-            <li>Singing</li>
-            <li>Traveling</li>
-            <li>Skiing</li>
-          </ul>
-        </div>
-      </section>
+
       <section className='flex justify-center py-16'>
         <button className='rounded-full border-2 border-white bg-primary px-7 py-3 text-3xl text-white'>
           View my resume
