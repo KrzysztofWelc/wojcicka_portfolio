@@ -1,3 +1,4 @@
+import { url } from 'inspector';
 import Image, { StaticImageData } from 'next/image';
 import Link from 'next/link';
 
@@ -7,6 +8,7 @@ interface ProjectProps {
   title: string;
   tags: string;
   description?: string;
+  url: string;
 }
 
 export default function Project({
@@ -15,9 +17,10 @@ export default function Project({
   description,
   image,
   imageAlt,
+  url
 }: ProjectProps) {
   return (
-    <Link href='/' className='rounded-3xl p-4 active:bg-slate-100'>
+    <Link href={url} className='rounded-3xl p-4 active:bg-slate-100'>
       <figure className='group'>
         <div className='inline-block w-full overflow-hidden rounded-3xl'>
           <Image

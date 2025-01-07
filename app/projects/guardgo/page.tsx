@@ -22,6 +22,7 @@ import FinalDesign2 from '@/public/guardgo/final_design_2.png'
 import FinalDesign3 from '@/public/guardgo/final_design_3.png'
 import FinalDesign4 from '@/public/guardgo/final_design_4.png'
 import FinalDesign5 from '@/public/guardgo/final_design_5.png'
+import ProjectsBtn from '@/components/ProjectsBtn';
 
 
 
@@ -426,9 +427,7 @@ export default function GuardGo() {
           </div>
         </section>
         <section className='mb-20 flex items-center justify-center'>
-          <button className='delay-50 rounded-full border-2 border-primary px-3 py-2 text-primary transition-all ease-in-out hover:bg-sky-50 hover:font-bold hover:tracking-wide'>
-            Explore other projects
-          </button>
+          <ProjectsBtn />
         </section>
       </main>
       <Footer />

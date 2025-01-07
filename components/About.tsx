@@ -30,7 +30,7 @@ export default function About() {
 
         },
         beyound: {
-            title: 'Beyound Design',
+            title: 'Beyond Design',
             body: <ul>
                 <li>🎸 Playing the Guitar</li>
                 <li>🎤 Singing</li>
@@ -47,7 +47,7 @@ export default function About() {
                 <button onClick={() => setPage('me')} className={page === 'me' ? 'activeAboutBtn' : 'aboutBtn'}>who i am</button>
                 <button onClick={() => setPage('what')} className={page === 'what' ? 'activeAboutBtn' : 'aboutBtn'}>what i do</button>
                 <button onClick={() => setPage('tools')} className={page === 'tools' ? 'activeAboutBtn' : 'aboutBtn'}>skills and tools</button>
-                <button onClick={() => setPage('beyound')} className={page === 'beyound' ? 'activeAboutBtn' : 'aboutBtn'}>beyound design</button>
+                <button onClick={() => setPage('beyound')} className={page === 'beyound' ? 'activeAboutBtn' : 'aboutBtn'}>beyond design</button>
             </div>
 
             <div>

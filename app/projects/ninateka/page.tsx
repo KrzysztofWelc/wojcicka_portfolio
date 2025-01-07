@@ -17,6 +17,7 @@ import Icon2 from '@/public/ninateka/icon2.svg'
 import Icon3 from '@/public/ninateka/icon3.svg'
 import Icon4 from '@/public/ninateka/icon4.svg'
 import Icon5 from '@/public/ninateka/icon5.svg'
+import ProjectsBtn from '@/components/ProjectsBtn'
 
 export default function ESBoarding() {
     const containerId = 'containerId';
@@ -362,9 +363,7 @@ export default function ESBoarding() {
                     </div>
                 </section>
                 <section className='mb-20 flex items-center justify-center'>
-                    <button className='delay-50 rounded-full border-2 border-primary px-3 py-2 text-primary transition-all ease-in-out hover:bg-sky-50 hover:font-bold hover:tracking-wide'>
-                        Explore other projects
-                    </button>
+                    <ProjectsBtn />
                 </section>
             </main>
 

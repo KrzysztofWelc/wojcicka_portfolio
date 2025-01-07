@@ -29,7 +29,7 @@ export default function Navbar() {
     <header>
       <div className='navbar_gradient fixed left-0 z-10 box-border w-screen'>
         <div
-          className={`mx-10 mb-6 mt-7 flex max-w-screen-xl justify-between align-middle xl:mx-auto ${isProjectsMenuVisible && 'h-[250px]'} ${isPlaygroundMenuVisible && 'h-[150px]'}`}
+          className={`mx-10 mb-6 mt-7 flex max-w-screen-xl justify-between align-middle xl:mx-auto ${isProjectsMenuVisible && 'h-[200px]'} ${isPlaygroundMenuVisible && 'h-[150px]'}`}
         >
           <Link href='/'>
             <Image src={Logo} alt='logo' width={200} height={50} />
@@ -73,9 +73,9 @@ export default function Navbar() {
                     <li className='pt-3 text-secondary'>
                       <Link href={'/projects/ninateka'}>Ninateka</Link>
                     </li>
-                    <li className='pt-3 text-secondary'>
+                    {/* <li className='pt-3 text-secondary'>
                       <Link href={'/'}>Szczecin Filharmony</Link>
-                    </li>
+                    </li> */}
                   </ul>
                 )}
               </li>

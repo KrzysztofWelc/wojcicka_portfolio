@@ -9,6 +9,9 @@ import Moodboard from '@/public/motion_animation/moodboard.png'
 import Drawing from '@/public/motion_animation/drawing.png'
 import Badge1 from '@/public/motion_animation/unity-creative-core.png'
 import Badge2 from '@/public/motion_animation/unityessentials_badge.png'
+import ProjectsBtn from '@/components/ProjectsBtn';
+import MotionMoodBoard from '@/components/MotionMoodBoard';
+
 
 export default function ESBoarding() {
     const containerId = 'containerId';
@@ -73,20 +76,7 @@ export default function ESBoarding() {
                         <h3 className="h3">Moodboard</h3>                        <figure>
                             <figcaption>
                                 <p>To define the visual direction, I developed a moodboard that reflects the essence of the project.</p>                            </figcaption>
-                            <LightboxItem
-                                width={Moodboard.width} height={Moodboard.height}
-                                className={lightBoxItemClass}
-                                url={Moodboard.src}
-                            >
-                                <Image
-                                    src={Moodboard}
-                                    placeholder='blur'
-                                    width={Moodboard.width}
-                                    height={Moodboard.height}
-                                    alt=''
-                                    className='mb-8 w-full'
-                                />
-                            </LightboxItem>
+                            <MotionMoodBoard />
 
                         </figure>
                     </div>
@@ -158,7 +148,7 @@ export default function ESBoarding() {
                         <a className='font-bold' href='https://sketchfab.com/3d-models/mercedes-benz-maybach-2022-979f37a878f04b2a8d888b62ea6027e9'> MPGS.STUDIOS </a>
                         for the model used in this project.</p>
                     <div className="flex">
-                        <video />
+                        <video muted autoPlay loop src='/motion_animation/movie_009.mp4' className='mx-auto mt-4 mb-8' />
                     </div>
                 </section>
                 <h2 className='mb-20 text-4xl'>Key Takeaways</h2>
@@ -171,9 +161,7 @@ export default function ESBoarding() {
                     </div>
                 </section>
                 <section className='mb-20 flex items-center justify-center'>
-                    <button className='delay-50 rounded-full border-2 border-primary px-3 py-2 text-primary transition-all ease-in-out hover:bg-sky-50 hover:font-bold hover:tracking-wide'>
-                        Explore other projects
-                    </button>
+                    <ProjectsBtn />
                 </section>
                 <Footer />
             </main></div>

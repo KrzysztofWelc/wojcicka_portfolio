@@ -25,6 +25,7 @@ import Icon5 from '@/public/esboarding/icon_5.svg'
 import IconArrow from '@/public/esboarding/icon_arrow.svg'
 import InformationArchitecture from '@/public/esboarding/information_architecture.png'
 import UILib from '@/public/esboarding/ui_library_components.png'
+import ProjectsBtn from '@/components/ProjectsBtn';
 
 export default function ESBoarding() {
   const containerId = 'containerId';
@@ -539,9 +540,7 @@ export default function ESBoarding() {
           </div>
         </section>
         <section className='mb-20 flex items-center justify-center'>
-          <button className='delay-50 rounded-full border-2 border-primary px-3 py-2 text-primary transition-all ease-in-out hover:bg-sky-50 hover:font-bold hover:tracking-wide'>
-            Explore other projects
-          </button>
+          <ProjectsBtn />
         </section>
       </main>
       <Footer />

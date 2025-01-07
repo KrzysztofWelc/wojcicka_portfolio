@@ -16,7 +16,7 @@ export default function Footer() {
         collaborating? <b className='text-primary'>Contact me!</b>
       </p>
       <div className='mx-auto flex items-center justify-center gap-12'>
-        <Link href='/'>
+        <Link href='https://www.linkedin.com/in/mwojcicka/' target='blank'>
           <Image
             className='size-8 md:size-11'
             src={LIIcon}
@@ -25,24 +25,24 @@ export default function Footer() {
             alt='linkedin logo'
           />
         </Link>
-        <Link href='/'>
+        <Link href='mailto:wojcicka.magdalena@outlook.com'>
           <Image
             className='size-8 md:size-11'
             src={MailIcon}
             height={52}
             width={52}
-            alt='linkedin logo'
+            alt='a envelope'
           />
         </Link>
-        <Link href='/'>
+        {/* <Link href='/'>
           <Image
             className='size-8 md:size-11'
             src={WAIcon}
             height={52}
             width={52}
-            alt='linkedin logo'
+            alt='whatsapp logo'
           />
-        </Link>
+        </Link> */}
       </div>
     </footer>
   );

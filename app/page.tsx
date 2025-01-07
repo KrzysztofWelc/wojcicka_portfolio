@@ -3,6 +3,7 @@
 import Footer from '@/components/Footer';
 import Project from '@/components/Project';
 import Image from 'next/image';
+import Link from 'next/link';
 import { useRef } from 'react';
 
 import HomepageImage from '@/public/homepage/homepage_image.jpeg'
@@ -71,6 +72,7 @@ export default function Home() {
             description={`Gamified app to enhance onboarding experience for international students.`}
             image={ESBoarding}
             imageAlt='A smartphone'
+            url={'/projects/esboarding'}
           />
           <Project
             title='GuardGo'
@@ -78,6 +80,7 @@ export default function Home() {
             description={`A wearable application to increase the users' sense of security.`}
             image={Guardgo}
             imageAlt='A smart watch'
+            url={'/projects/guardgo'}
           />
         </div>
       </section>
@@ -89,12 +92,14 @@ export default function Home() {
             tags='3D Models | Abstract | Blender'
             image={TDModels}
             imageAlt='An abstrtact shape'
+            url={'/playground/models'}
           />
           <Project
             title='Mercedes-Benz motion visualisation'
             tags='Loop animation | Unity 3D'
             image={Motion}
             imageAlt='A mercedes car surrounded by abstract shapes.'
+            url={'/playground/motion_visualisation'}
           />
         </div>
       </section>
@@ -113,9 +118,9 @@ export default function Home() {
       </section>
 
       <section className='flex justify-center py-16'>
-        <button className='rounded-full border-2 border-white bg-primary px-7 py-3 text-3xl text-white'>
+        <Link href='/cv.pdf' target='blank' className='rounded-full border-2 border-white bg-primary px-7 py-3 text-3xl text-white'>
           View my resume
-        </button>
+        </Link>
       </section>
       <Footer />
     </main>

@@ -7,6 +7,7 @@ import Image from 'next/image';
 import Header from '@/public/3d_graphic/header.png'
 import Emotion from '@/public/3d_graphic/3d_model_emotion.png'
 import Abstract from '@/public/3d_graphic/3d_model_abstract.png'
+import ProjectsBtn from '@/components/ProjectsBtn';
 
 export default function ESBoarding() {
     const containerId = 'containerId';
@@ -116,9 +117,7 @@ export default function ESBoarding() {
                     </div>
                 </section>
                 <section className='mb-20 flex items-center justify-center'>
-                    <button className='delay-50 rounded-full border-2 border-primary px-3 py-2 text-primary transition-all ease-in-out hover:bg-sky-50 hover:font-bold hover:tracking-wide'>
-                        Explore other projects
-                    </button>
+                    <ProjectsBtn />
                 </section>
                 <Footer />
             </main></div>

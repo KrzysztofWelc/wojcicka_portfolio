@@ -68,11 +68,11 @@ export default function MobileNav({ closeHandler: closeSideMenuHandler, isVisibl
                         closeHandler()
                       }} href={'/projects/ninateka'}>Ninateka</Link>
                     </li>
-                    <li className='pt-3 text-secondary'>
+                    {/* <li className='pt-3 text-secondary'>
                       <Link onClick={() => {
                         closeHandler()
                       }} href={'/'}>Szczecin Filharmony</Link>
-                    </li>
+                    </li> */}
                   </ul>
                 )}
               </li>
