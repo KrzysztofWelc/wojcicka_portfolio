@@ -4,7 +4,7 @@ import Footer from '@/components/Footer';
 import useLightbox, { LightboxItem } from '@/hooks/useLightbox';
 import Image from 'next/image';
 
-import Header from '@/public/homepage/motion_visualisation.jpeg'
+import Header from '@/public/motion_animation/Header.jpg'
 import Drawing from '@/public/motion_animation/drawing.png'
 import Badge1 from '@/public/motion_animation/unity-creative-core.png'
 import Badge2 from '@/public/motion_animation/unityessentials_badge.png'
