@@ -26,6 +26,8 @@ import IconArrow from '@/public/esboarding/icon_arrow.svg'
 import InformationArchitecture from '@/public/esboarding/information_architecture.png'
 import UILib from '@/public/esboarding/ui_library_components.png'
 import ProjectsBtn from '@/components/ProjectsBtn';
+import ExploreBtn from '@/components/ExploreBtn';
+import SectionAnchor from '@/components/SectionAnchor';
 
 export default function ESBoarding() {
   const containerId = 'containerId';
@@ -47,9 +49,7 @@ export default function ESBoarding() {
               Gamified app to enhance onboarding experience for international
               students.
             </p>
-            <button className='delay-50 rounded-full border-2 border-primary px-3 py-2 text-primary transition-all ease-in-out hover:bg-sky-50 hover:font-bold hover:tracking-wide'>
-              Explore casy study
-            </button>
+            <ExploreBtn text='Explorem case study' sectionId='research' />
           </div>
           <div className='flex flex-1 flex-col'>
             <Image
@@ -86,6 +86,7 @@ export default function ESBoarding() {
             </div>
           </div>
         </section>
+        <SectionAnchor id='research' />
         <h2 className='mb-20 text-4xl'>UX Reaserch</h2>
         <section className='mx-10'>
           <h3 className='h3'>Background</h3>

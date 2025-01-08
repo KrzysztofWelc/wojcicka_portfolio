@@ -8,8 +8,10 @@ import Header from '@/public/3d_graphic/header.png'
 import Emotion from '@/public/3d_graphic/3d_model_emotion.png'
 import Abstract from '@/public/3d_graphic/3d_model_abstract.png'
 import ProjectsBtn from '@/components/ProjectsBtn';
+import SectionAnchor from '@/components/SectionAnchor';
+import ExploreBtn from '@/components/ExploreBtn';
 
-export default function ESBoarding() {
+export default function Models() {
     const containerId = 'containerId';
     const lightBoxItemClass = 'lightboxItem';
     useLightbox({ slideSelector: `#${containerId} .${lightBoxItemClass}` });
@@ -28,9 +30,7 @@ export default function ESBoarding() {
                         <p className='mb-8'>
                             Discover the beauty of abstraction in my 3D model collection!
                         </p>
-                        <button className='delay-50 rounded-full border-2 border-primary px-3 py-2 text-primary transition-all ease-in-out hover:bg-sky-50 hover:font-bold hover:tracking-wide'>
-                            Explore models
-                        </button>
+                        <ExploreBtn text='Explore models' sectionId='models' />
                     </div>
                     <div className='flex flex-1 flex-col'>
                         <Image
@@ -62,7 +62,8 @@ export default function ESBoarding() {
                         </div>
                     </div>
                 </section>
-                <h2 className='mb-20 text-4xl'>UX Reaserch</h2>
+                <SectionAnchor id='models' />
+                <h2 className='mb-20 text-4xl'>Models</h2>
                 <section className="mx-10">
                     <div className='mb-20'>
                         <h3 className="h3">Anger – A Visualization of Emotion</h3>

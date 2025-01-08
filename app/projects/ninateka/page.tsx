@@ -18,6 +18,8 @@ import Icon3 from '@/public/ninateka/icon3.svg'
 import Icon4 from '@/public/ninateka/icon4.svg'
 import Icon5 from '@/public/ninateka/icon5.svg'
 import ProjectsBtn from '@/components/ProjectsBtn'
+import ExploreBtn from '@/components/ExploreBtn';
+import SectionAnchor from '@/components/SectionAnchor';
 
 export default function ESBoarding() {
     const containerId = 'containerId';
@@ -38,9 +40,7 @@ export default function ESBoarding() {
                         <p className='mb-8'>
                             Have fun watching movies from Ninateka on SmartTV
                         </p>
-                        <button className='delay-50 rounded-full border-2 border-primary px-3 py-2 text-primary transition-all ease-in-out hover:bg-sky-50 hover:font-bold hover:tracking-wide'>
-                            Explore casy study
-                        </button>
+                        <ExploreBtn text='Explore case study' sectionId='background' />
                     </div>
                     <div className='flex flex-1 flex-col'>
                         <Image
@@ -80,6 +80,7 @@ export default function ESBoarding() {
                 </section>
 
                 <section className='mx-10'>
+                    <SectionAnchor id='background' />
                     <h3 className='h3'>Background</h3>
                     <div className='mb-4 *:mb-6'>
                         <p>

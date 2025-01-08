@@ -23,6 +23,8 @@ import FinalDesign3 from '@/public/guardgo/final_design_3.png'
 import FinalDesign4 from '@/public/guardgo/final_design_4.png'
 import FinalDesign5 from '@/public/guardgo/final_design_5.png'
 import ProjectsBtn from '@/components/ProjectsBtn';
+import SectionAnchor from '@/components/SectionAnchor';
+import ExploreBtn from '@/components/ExploreBtn';
 
 
 
@@ -47,9 +49,7 @@ export default function GuardGo() {
               A wearable application to increase the users&apos; sense of
               security.
             </p>
-            <button className='delay-50 rounded-full border-2 border-primary px-3 py-2 text-primary transition-all ease-in-out hover:bg-sky-50 hover:font-bold hover:tracking-wide'>
-              Explore casy study
-            </button>
+            <ExploreBtn text='Explore case study' sectionId='ux-research' />
           </div>
           <div className='flex flex-1 flex-col'>
             <Image
@@ -91,7 +91,8 @@ export default function GuardGo() {
           </div>
         </section>
         <section>
-          <h2 className='text-4xl'>UX Reasearch</h2>
+          <SectionAnchor id='ux-research' />
+          <h2 className='text-4xl'>UX Research</h2>
           <section className='mx-10'>
             <div className='my-24 flex justify-center'>
               <Message text='text me when you get home' />

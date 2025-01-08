@@ -4,13 +4,14 @@ import Footer from '@/components/Footer';
 import useLightbox, { LightboxItem } from '@/hooks/useLightbox';
 import Image from 'next/image';
 
-import Header from '@/public/motion_animation/header.png'
-import Moodboard from '@/public/motion_animation/moodboard.png'
+import Header from '@/public/homepage/motion_visualisation.jpeg'
 import Drawing from '@/public/motion_animation/drawing.png'
 import Badge1 from '@/public/motion_animation/unity-creative-core.png'
 import Badge2 from '@/public/motion_animation/unityessentials_badge.png'
 import ProjectsBtn from '@/components/ProjectsBtn';
 import MotionMoodBoard from '@/components/MotionMoodBoard';
+import ExploreBtn from '@/components/ExploreBtn';
+import SectionAnchor from '@/components/SectionAnchor';
 
 
 export default function ESBoarding() {
@@ -32,9 +33,7 @@ export default function ESBoarding() {
                         <p className='mb-8'>
                             Motion visualization created using Unity 3D, inspired by the luxury and elegance of Mercedes-Benz vehicles.
                         </p>
-                        <button className='delay-50 rounded-full border-2 border-primary px-3 py-2 text-primary transition-all ease-in-out hover:bg-sky-50 hover:font-bold hover:tracking-wide'>
-                            Explore models
-                        </button>
+                        <ExploreBtn text='Explore my work' sectionId='overview' />
                     </div>
                     <div className='flex flex-1 flex-col'>
                         <Image
@@ -66,6 +65,7 @@ export default function ESBoarding() {
                         </div>
                     </div>
                 </section>
+                <SectionAnchor id='overview' />
                 <h2 className='mb-20 text-4xl'>Preparation</h2>
                 <section className="mx-10">
                     <div className='mb-20'>

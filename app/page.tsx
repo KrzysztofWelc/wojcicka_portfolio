@@ -15,10 +15,11 @@ import TDModels from '@/public/homepage/3d_models.jpeg'
 import Motion from '@/public/homepage/motion_visualisation.jpeg'
 import About from '@/components/About';
 import AboutImage from '@/public/homepage/about_me.png';
+import SectionAnchor from '@/components/SectionAnchor';
+import ExploreBtn from '@/components/ExploreBtn';
 
 
 export default function Home() {
-  const projectsSectionRef = useRef<HTMLDivElement>(null);
 
   return (
     <main>
@@ -39,16 +40,7 @@ export default function Home() {
               design the best products and services for{' '}
               <b className='text-primary'>users</b>.
             </p>
-            <button
-              onClick={() =>
-                projectsSectionRef.current?.scrollIntoView({
-                  behavior: 'smooth',
-                })
-              }
-              className='delay-50 mx-auto rounded-full border-2 border-primary px-3 py-2 text-2xl text-primary transition-all ease-in-out hover:bg-sky-50 hover:font-bold hover:tracking-wide md:ml-0'
-            >
-              Explore my work
-            </button>
+            <ExploreBtn text='Explore my work' sectionId='projects' />
           </div>
           <div className='flex flex-1 flex-col'>
             <Image
@@ -63,7 +55,8 @@ export default function Home() {
           </div>
         </div>
       </header>
-      <section id='projects' className='pb-16 pt-8' ref={projectsSectionRef}>
+      <section className='pb-16 pt-8'>
+        <SectionAnchor id='projects' />
         <h2 className='text-3xl font-bold tracking-wide'>Projects</h2>
         <div className='mx-auto mt-9 grid grid-cols-1 grid-rows-2 gap-x-28 gap-y-12 md:grid-cols-2 md:grid-rows-1'>
           <Project
@@ -84,7 +77,8 @@ export default function Home() {
           />
         </div>
       </section>
-      <section id='playground' className='pb-16'>
+      <section className='pb-16'>
+        <SectionAnchor id='playground' />
         <h2 className='text-3xl font-bold tracking-wide'>Playground</h2>
         <div className='mx-auto mt-9 grid grid-cols-1 grid-rows-2 gap-x-28 md:grid-cols-2 md:grid-rows-1'>
           <Project
@@ -103,7 +97,8 @@ export default function Home() {
           />
         </div>
       </section>
-      <section id='about' className='pb-16'>
+      <section className='pb-16'>
+        <SectionAnchor id='about' />
         <h2 className='mb-16 text-3xl font-bold tracking-wide'>About me</h2>
         <div className="flex gap-14 justify-between items-start flex-col-reverse xl:flex-row">
           <Image
